@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolio Data Science on Antoine Kassi</title>
+    <link>https://antonio2505.github.io/antoine_kassi/</link>
+    <description>Recent content in Portfolio Data Science on Antoine Kassi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Apr 2022 10:58:08 -0400</lastBuildDate><atom:link href="https://antonio2505.github.io/antoine_kassi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projets 4: Arbritrage Statistique</title>
+      <link>https://antonio2505.github.io/antoine_kassi/post/projet-4/</link>
+      <pubDate>Fri, 29 Apr 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://antonio2505.github.io/antoine_kassi/post/projet-4/</guid>
+      <description>PAIRS TRADING STRATEGY PAIRS TRADING est une stratégie de market-neutral trading permettant aux traders de profiter pratiquement toutes les conditions du marché : tendance haussière, tendance baissière ou mouvement latéral. Cette stratégie est classée comme une stratégie d&amp;rsquo;arbitrage statistique et de négociation de convergence(Hedging) wikipedia
+ Qu&amp;rsquo;est ce que market-neutral trading strategy ?  market-neutral trading strategy est un type de stratégie d&amp;rsquo;investissement par un investisseur ou un gestionnaire d&amp;rsquo;investissement qui cherche à profiter à la fois de la hausse et de la baisse des prix sur un ou plusieurs marchés tout en essayant d&amp;rsquo;éviter complètement prise la de risque de marché.</description>
+    </item>
+    
+    <item>
+      <title>Projets 3: Couverture de portefeuille algorithmique (Hedging)</title>
+      <link>https://antonio2505.github.io/antoine_kassi/post/projet-3/</link>
+      <pubDate>Sun, 24 Apr 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://antonio2505.github.io/antoine_kassi/post/projet-3/</guid>
+      <description>Qu&amp;rsquo;est-ce que la couverture de portefeuille ? La couverture de portefeuille décrit une variété de techniques utilisées par les gestionnaires de placements, les investisseurs individuels et les sociétés pour réduire l&amp;rsquo;exposition au risque dans un portefeuille de placement. La couverture utilise un investissement pour minimiser l&amp;rsquo;impact négatif des fluctuations de prix défavorables sur un autre. il existe de nombreuses façons de couvrir les actions, par example utiliser des options pour couvrir les risques portefeuille.</description>
+    </item>
+    
+    <item>
+      <title>Project 2: Trading Algorithmique</title>
+      <link>https://antonio2505.github.io/antoine_kassi/post/projet-2/</link>
+      <pubDate>Sun, 10 Apr 2022 11:00:59 -0400</pubDate>
+      
+      <guid>https://antonio2505.github.io/antoine_kassi/post/projet-2/</guid>
+      <description>Le trading algorithmique est une méthode d&amp;rsquo;exécution d&amp;rsquo;ordres utilisant des instructions de trading automatisées préprogrammées tenant compte de variables telles que la date, le prix et le volume de l&amp;rsquo;actif. Ce type de trading tente de tirer parti de la vitesse et des ressources de calcul des ordinateurs par rapport aux traders humains.
+Trading Algorithmique La majorité des traders perdent de l&amp;rsquo;argent. Ils perdent de l&amp;rsquo;argent non pas parce qu&amp;rsquo;ils ne comprennent pas le marché, mais simplement parce que leurs décisions de trading ne sont pas basées sur des recherches solides et des méthodes de trading éprouvées.</description>
+    </item>
+    
+    <item>
+      <title>Projets 1: Optimisation de portefeuille</title>
+      <link>https://antonio2505.github.io/antoine_kassi/post/projet-1/</link>
+      <pubDate>Tue, 29 Mar 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://antonio2505.github.io/antoine_kassi/post/projet-1/</guid>
+      <description>Modern Portfolio Theory Il a été formulé dans les années 1950 par Harry Markowitz.
+Quelle est l&amp;rsquo;idée principale? Un seul titre est assez risqué : nous ne savons pas avec certitude si un stock va monter ou descendre.
+ Mais on peut combiner plusieurs titres, afin de réduire au maximum le risque. DIVERSIFICATION.
+lorsqu&amp;rsquo;une valeur d&amp;rsquo;une action baisse, une autre augmente. La combinaison des actifs est l&amp;rsquo;idée principale : c&amp;rsquo;est la même chose que le modèle black-scholes.</description>
+    </item>
+    
+    <item>
+      <title>A Propos</title>
+      <link>https://antonio2505.github.io/antoine_kassi/aboutfr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://antonio2505.github.io/antoine_kassi/aboutfr/</guid>
+      <description>Data scientist motivé et passionné des marchés financiers et du trading algorithmique, je souhaite travailler en tant que Data Scientist. Mon objectif est d&amp;rsquo;être l&amp;rsquo;un des meilleurs data scientist et trader, utilisant mes compétences en programmation pour cracker les marchés financiers. Je suis un passionné de l&amp;rsquo;auto-apprentissage (selflearning), toutes mes competences en programmation et sur les marchés financiers, je les ai acqueri a travers les livres, certifications et les recherches.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://antonio2505.github.io/antoine_kassi/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://antonio2505.github.io/antoine_kassi/contact/</guid>
+      <description>Suivez-moi sur ces plateformes de médias sociaux.
+   Platform URL     Gmail: knogbou@gmail.com   LinkedIn: https://www.linkedin.com/in/antoine-kassi-09003a123/   GitHub: https://github.com/antonio2505   WhatsApp: https://wa.me/+22569908862    </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Projets 3: Couverture de portefeuille algorithmique | Antoine Kassi</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Utilisation des Greeks pour couvrir les risks de notre portefeuille">
+    <meta name="generator" content="Hugo 0.96.0" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://antonio2505.github.io/kassi_portfolio/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Projets 3: Couverture de portefeuille algorithmique" />
+<meta property="og:description" content="Utilisation des Greeks pour couvrir les risks de notre portefeuille" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://antonio2505.github.io/kassi_portfolio/fr/post/projet-3/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-24T10:58:08-04:00" />
+<meta property="article:modified_time" content="2022-04-24T10:58:08-04:00" /><meta property="og:site_name" content="Antoine Kassi" />
+
+<meta itemprop="name" content="Projets 3: Couverture de portefeuille algorithmique">
+<meta itemprop="description" content="Utilisation des Greeks pour couvrir les risks de notre portefeuille"><meta itemprop="datePublished" content="2022-04-24T10:58:08-04:00" />
+<meta itemprop="dateModified" content="2022-04-24T10:58:08-04:00" />
+<meta itemprop="wordCount" content="2339">
+<meta itemprop="keywords" content="scene," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Projets 3: Couverture de portefeuille algorithmique"/>
+<meta name="twitter:description" content="Utilisation des Greeks pour couvrir les risks de notre portefeuille"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/Trader_Markets.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://antonio2505.github.io/kassi_portfolio/fr/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Antoine Kassi
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://antonio2505.github.io/kassi_portfolio/fr/aboutfr/" title="A Propos page">
+              A Propos
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://antonio2505.github.io/kassi_portfolio/fr/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://antonio2505.github.io/kassi_portfolio/fr/post/" title="Projets page">
+              Projets
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://github.com/antonio2505" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/antoine-kassi-09003a123/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Projets 3: Couverture de portefeuille algorithmique</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Utilisation des Greeks pour couvrir les risks de notre portefeuille
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJETS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://antonio2505.github.io/kassi_portfolio/fr/post/projet-3/&amp;title=Projets%203:%20Couverture%20de%20portefeuille%20algorithmique" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Projets 3: Couverture de portefeuille algorithmique</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-04-24T10:58:08-04:00">April 24, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/Trader_Markets.jpg"/>
+</figure>
+
+<pre><code>Qu'est-ce que la couverture de portefeuille ?
+</code></pre>
+<p>La couverture de portefeuille décrit une variété de techniques utilisées par les gestionnaires de placements, les investisseurs individuels et les sociétés pour réduire l&rsquo;exposition au risque dans un portefeuille de placement. La couverture utilise un investissement pour minimiser l&rsquo;impact négatif des fluctuations de prix défavorables sur un autre.
+il existe de nombreuses façons de couvrir les actions, par example utiliser des options pour couvrir les risques portefeuille.</p>
+<pre><code>Comment fonctionne la couverture de portefeuille ?
+</code></pre>
+<p>La couverture de portefeuille implique généralement l&rsquo;utilisation de dérivés financiers (options et contrats à terme(futures)) pour limiter les pertes. Par exemple, un investisseur inquiet des fluctuations de prix à court terme des actions ABC peut couvrir son portefeuille d&rsquo;actions contre les pertes à court terme en achetant le même nombre d&rsquo;options de vente ABC. Une baisse de la valeur des actions ABC sera couverte, ou compensée, par les bénéfices des options de vente.</p>
+<pre><code>Quelles sont les stratégies de couverture les plus efficaces pour réduire le risque de marché ?
+</code></pre>
+<p>Il existe un certain nombre de stratégies de couverture efficaces pour réduire le risque de marché, selon l&rsquo;actif ou le portefeuille d&rsquo;actifs couverts. Les trois les plus populaires sont la construction de portefeuille, les options et les indicateurs de volatilité.</p>
+<p>Qu&rsquo;est une Option ?</p>
+<p>Un contrat d&rsquo;option est un accord qui donne à l&rsquo;acheteur le droit, mais pas l&rsquo;obligation, d&rsquo;acheter ou de vendre un actif à un prix déterminé. Dans certains cas, une option peut être exécutée à tout moment avant la date d&rsquo;expiration(Options American), et dans d&rsquo;autres, elle ne peut être exécutée qu&rsquo;à la date d&rsquo;expiration(Option Europeen).</p>
+<p>C&rsquo;est quoi l&rsquo;indicateurs de volatilité ?
+L&rsquo;indicateur de volatilité est un outil technique qui mesure à quel point un titre s&rsquo;éloigne de son prix moyen, supérieur et inférieur.</p>
+<p>exemple: Bollinger Bands, Average True Range (ATR)&hellip;</p>
+<pre><code>Théorie moderne du portefeuille (Modern Portfolio Theory)
+</code></pre>
+<p>L&rsquo;un des principaux outils est la théorie moderne du portefeuille (MPT), qui utilise la diversification pour créer des groupes d&rsquo;actifs qui réduisent la volatilité. MPT utilise des mesures statistiques pour déterminer une frontière efficiente pour un montant de rendement attendu pour un risque défini. La théorie examine la corrélation entre différents actifs, ainsi que la volatilité des actifs, pour créer un portefeuille optimal.</p>
+<pre><code>Indicateur d'indice de volatilité
+</code></pre>
+<p>Les investisseurs peuvent également se couvrir en utilisant <a href="https://www.investopedia.com/articles/exchangetradedfunds/11/profit-from-vix.asp">l&rsquo;indicateur de l&rsquo;indice de volatilité (VIX)</a>. Le VIX(Volatility Index Indicator) mesure la volatilité implicite <a href="https://www.investopedia.com/terms/a/atthemoney.asp">at the money calls and puts</a> sur l&rsquo;indice S&amp;P 500. Le VIX augmente pendant les périodes de volatilité accrue. Généralement, un niveau inférieur à 20 indique une faible volatilité, tandis qu&rsquo;un niveau de 30 est très volatil. Il existe des fonds négociés en bourse <a href="https://www.investopedia.com/terms/e/etf.asp">(ETF)</a> qui suivent le VIX. Les investisseurs peuvent utiliser des actions ou des options d&rsquo;ETF pour prendre une position longue sur le VIX en tant que couverture spécifique à la volatilité.</p>
+<p>Bien sûr, bien que ces outils soient certainement puissants, ils ne peuvent pas réduire tous les risques de marché.</p>
+<pre><code>Options
+</code></pre>
+<p>Les options sont un autre outil puissant. Les investisseurs qui cherchent à couvrir une action individuelle avec une liquidité raisonnable peuvent souvent acheter des options de vente pour se protéger contre le risque d&rsquo;un mouvement baissier. Les puts prennent de la valeur à mesure que le prix du titre sous-jacent baisse. Le principal inconvénient de cette approche est le montant de la prime pour acheter les options de vente<a href="https://www.investopedia.com/terms/o/option-premium.asp">(premium)</a>. Les options achetées sont sujettes à une dégradation dans le temps et perdent de la valeur à mesure qu&rsquo;elles approchent de l&rsquo;expiration. Les écarts de vente verticaux <a href="https://www.investopedia.com/terms/v/verticalspread.asp">(Vertical put spreads)</a> peuvent réduire les montants de prime dépensés.</p>
+<p>Actions ont une exposition très directe au risque specifique et systématique. Les options, en revanche, sont exposées non seulement à l&rsquo;actif sous-jacent, mais également aux taux d&rsquo;intérêt, au temps et à la volatilité. Ces expositions sont des données d&rsquo;entrée(ou des inputs) du modèle d&rsquo;évaluation des options <a href="https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model">Black-Scholes</a>. Étant donné que ces entrées affectent la valeur de l&rsquo;option en question, la dérivée partielle de la fonction peut nous dire comment la valeur de l&rsquo;option change lorsque l&rsquo;une de ces expositions change en maintenant, les autres constantes.</p>
+<p><em>La formule du model de Black-Scholes</em>:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/black-scholes.png"/>
+</figure>
+</p>
+<p>Ici, nous nous concentrerons sur la stratégie d&rsquo;options pour couvrir notre portefeuille. Discutons d&rsquo;abord de toutes les dérivées partielles de ce modèle d&rsquo;évaluation des options, puis codez un système de couverture algorithmique en utilisant Python.</p>
+<pre><code>Les Greeks
+
+Que sont les Greeks ?
+</code></pre>
+<p>Les variables utilisées pour évaluer le risque sur le marché des options sont communément appelées « les Greeks ». Un symbole Greeks est utilisé pour désigner chacun de ces risques. Les traders utilisent différentes valeurs Greeks, telles que delta, thêta et autres, pour évaluer le risque des options et gérer les portefeuilles d&rsquo;options.
+Chacun de ces Greeks est associé à une valeur, et cette valeur indique aux traders comment l&rsquo;option se déplace ou le risque associé à cette option. Le nombre ou la valeur associée à un Greeks change avec le temps. Par conséquent, les traders d&rsquo;options sophistiqués peuvent calculer ces valeurs quotidiennement pour évaluer tout changement susceptible d&rsquo;affecter leurs positions ou leurs perspectives, ou simplement pour vérifier si leur portefeuille doit être rééquilibré. Vous trouverez ci-dessous quelques-uns des principaux Greeks.</p>
+<pre><code>Delta
+</code></pre>
+<p>La dérivée partielle du premier ordre par rapport à l&rsquo;actif sous-jacent de l&rsquo;équation de <a href="https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model">Black-Scholes</a> est appelée Delta. Delta (Δ) représente le taux de variation entre le prix de l&rsquo;option et une variation de $1 du prix de l&rsquo;actif sous-jacent. Le delta d&rsquo;une option d&rsquo;achat(call) est compris entre 0 et 1, tandis que le delta d&rsquo;une option de vente(put) est compris entre 0 et -1.
+Par exemple, supposons qu&rsquo;un investisseur est sur une option d&rsquo;achat(call) avec un delta de 0,20. Par conséquent, si l&rsquo;action sous-jacente augmente de $1, le prix de l&rsquo;option augmentera théoriquement de 20 cents.
+Pour les traders d&rsquo;options, le delta représente également le ratio de couverture <a href="https://www.investopedia.com/terms/h/hedgeratio.asp">(hedge ratio)</a> pour créer une position delta neutre <a href="https://www.investopedia.com/terms/d/deltaneutral.asp">(Delta Neutral, est une stratégie utilisant plusieurs positions avec des deltas positifs et négatifs équilibrés de sorte que le delta global des actifs en question soit zéro)</a>. Par exemple, si vous achetez une option d&rsquo;achat(American call) avec un delta de 0,40, vous devrez vendre 40 actions pour être entièrement couvert. Le delta net pour un portefeuille d&rsquo;options peut également être utilisé pour obtenir le ratio de couverture du portefeuille. Par exemple, une option d&rsquo;achat delta de 0,40 a aujourd&rsquo;hui une probabilité implicite de 40 % de finir <a href="https://www.investopedia.com/terms/i/inthemoney.asp">in-the-money(ITM)</a>, en positif.</p>
+<p>Formule:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/delta_formula.png"/>
+</figure>
+</p>
+<pre><code>Theta
+</code></pre>
+<p>La dérivée partielle du premier ordre par rapport au temps jusqu&rsquo;à l&rsquo;expiration de l&rsquo;option de l&rsquo;équation de Black-Scholes est connue sous le nom de thêta. Theta (Θ) représente le taux de variation entre le prix de l&rsquo;option et le temps. Thêta indique le montant que le prix d&rsquo;une option diminuerait à mesure que le temps jusqu&rsquo;à l&rsquo;expiration diminue. Par exemple, supposons qu&rsquo;un investisseur est sur un achat d&rsquo;une option avec un thêta de -0,50. Le prix de l&rsquo;option diminuerait de 50 cents chaque jour qui passe. Le thêta augmente lorsque les options sont à <a href="https://www.investopedia.com/terms/a/atthemoney.asp">at-the-money</a>,une situation où le prix d&rsquo;exercice(strike price) d&rsquo;une option est identique au prix actuel du marché du titre sous-jacent. et diminue lorsque les options sont a in-the-money ou at-the-money. Les options d&rsquo;achats de call et de put auront généralement un thêta négatif ; Les options de vente de call et de put auront un thêta positif.</p>
+<p>Formile:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/theta_formula.png"/>
+</figure>
+</p>
+<pre><code>Gamma
+</code></pre>
+<p>La dérivée partielle de second ordre par rapport à l&rsquo;actif sous-jacent de l&rsquo;équation de Black-Scholes est connue sous le nom de gamma. Gamma (Γ) représente le taux de variation entre le delta d&rsquo;une option et le prix de l&rsquo;actif sous-jacent.
+Gamma indique le montant que le delta changerait en cas de mouvement de $1 du titre sous-jacent. Par exemple, supposons qu&rsquo;un investisseur est sur une option d&rsquo;achat (call) sur l&rsquo;action XYZ. L&rsquo;option d&rsquo;achat(call) a un delta de 0,50 et un gamma de 0,10. Par conséquent, si l&rsquo;action XYZ augmente ou diminue de $1, le delta de l&rsquo;option d&rsquo;achat(call) augmentera ou diminuera de 0,10.</p>
+<p>Formule:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/gamma_formula.png"/>
+</figure>
+</p>
+<pre><code>Vega
+</code></pre>
+<p>La dérivée partielle de premier ordre par rapport à la volatilité des actifs sous-jacents de l&rsquo;équation de Black-Scholes est connue sous le nom de vega. Vega (ν) représente le taux de variation entre la valeur d&rsquo;une option et la <a href="link:">volatilité implicite</a> de l&rsquo;actif sous-jacent. Vega indique le montant des changements de prix d&rsquo;une option compte tenu d&rsquo;un changement de 1% de la volatilité implicite. Par exemple, une option avec un vega de 0,10 indique que la valeur de l&rsquo;option devrait changer de 10 cents si la volatilité implicite change de 1 %.</p>
+<p>Formule:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/vega_formula.png"/>
+</figure>
+</p>
+<pre><code>Rho
+</code></pre>
+<p>La dérivée partielle de premier ordre par rapport au taux sans risque de l&rsquo;équation de Black-Scholes est appelée rho. Rho (ρ) représente le taux de variation entre la valeur d&rsquo;une option et une variation de 1 % du taux d&rsquo;intérêt. Par exemple, supposons qu&rsquo;une option d&rsquo;achat ait un rho de 0,05 et un prix de $1,25. Si les taux d&rsquo;intérêt augmentent de 1 %, la valeur de l&rsquo;option d&rsquo;achat passerait à $1,30.</p>
+<p>Formule:</p>
+<pre><code>  Dynamic Hedging
+</code></pre>
+<p>Dynamic Hedging est une stratégie qui consiste à rééquilibrer les positions de couverture à mesure que les conditions du marché changent.</p>
+<p>Considérez le cas suivant :</p>
+<p>Un collègue a actuellement une position courte(vente) sur 1000 NVDA call option, il veut couvrir sa position aux changements de volatilité, aux mouvements de l&rsquo;actif sous-jacent. Vous êtes sur dans la de gestion des risques et proposez de construire une couverture dynamique à rééquilibrer quotidiennement. Comment neutraliser son exposition au vega, delta et gamma de l&rsquo;option ?</p>
+<p>La première chose à réaliser est que pour neutraliser l&rsquo;exposition aux greeks, nous allons avoir besoin de positions compensatoires sur d&rsquo;autres options. Il y a trois greeks à neutraliser, nous avons donc besoin de trois options pour créer trois équations de greeks et le pourcentage d&rsquo;allocation de ces trois inconnues. Cependant, l&rsquo;astuce ici consiste à réaliser que la dérivée partielle de l&rsquo;actif sous-jacent par rapport à lui-même n&rsquo;est que de 1, cela signifie que l&rsquo;actif sous-jacent a un delta de 1 et que toutes les autres valeurs greeks sont de 0. Cela signifie que nous pouvons construire un portefeuille de deux options négociables, trouver les pourcentages d&rsquo;allocation optimal pour neutraliser les greeks, puis prendre une position compensatoire dans l&rsquo;actif sous-jacent.</p>
+<p>Python pour la couverture dynamique(Dynamic Hedging)</p>
+<p>Considérez le code suivant qui modélise les options Calls et Put européens.
+lien du code complet:</p>
+<p>Pour le cas ci-dessus, considérez les conditions suivantes:
+short 1000 NVDA calls at strike=545
+NVDA price $543
+NVDA <a href="https://www.investopedia.com/terms/i/iv.asp">implied volatility</a> 53%
+1 mois jusqu&rsquo;a expiration de l&rsquo;option
+30 day <a href="https://www.investopedia.com/terms/l/libor.asp">LIBOR</a> rate 1.5%</p>
+<p>En utilisant ces données, nous pouvons trouver la valeur théorique de la position d&rsquo;option de notre collègue.
+images:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/1.png"/>
+</figure>
+</p>
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/2.png"/>
+</figure>
+
+<p>Cela signifie que notre collègue aurait perçu une prime de $32 264(prix de l&rsquo;option vente call) pour la vente des options.</p>
+<p>c&rsquo;est quoi la prime(premium) ?</p>
+<p>Une prime d&rsquo;option est le prix actuel du marché d&rsquo;un contrat d&rsquo;option. Il s&rsquo;agit donc du revenu perçu par le vendeur (émetteur) d&rsquo;un contrat d&rsquo;option à une autre partie.</p>
+<p>Et les Greeks ? Pour trouver la position de notre collègue dans les Greeks, nous pouvons simplement les determiner et multiplier par la position(par 1000)</p>
+<p>images code:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/3.png"/>
+</figure>
+</p>
+<p>resultat:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/4.png"/>
+</figure>
+</p>
+<p>pourquoi (-) devant ? parce que nous soumme en position de vente(call)</p>
+<p>Cela signifie que le delta, le gamma et le vega nets du portefeuille sont:
+Delta: -523.88
+Gamma: -6.35
+Vega: -815.54</p>
+<p>Considérons maintenant deux autres options d&rsquo;achat négociables, tous les autres paramètres sont les mêmes mais les deux prix d&rsquo;exercice(strike price) sont 550 et 555&hellip;</p>
+<p>strike=550
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/5.png"/>
+</figure>
+</p>
+<p>resultat
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/6.png"/>
+</figure>
+</p>
+<p>strike=555
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/7.png"/>
+</figure>
+</p>
+<p>resultat:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/8.png"/>
+</figure>
+</p>
+<p>Call Option A:</p>
+<p>Delta :  0.49991
+Gamma :  0.00605
+Vega  :  0.77823</p>
+<p>Call Option B:</p>
+<p>Delta :  0.47617
+Gamma :  0.00577
+Vega  :  0.74127</p>
+<p>Actif sous-jacent (action NVDA)
+Delta: 1 actif derive par lui meme
+Gamma: 0
+Vega: 0</p>
+<p>En utilisant une combinaison de ces actifs, nous pouvons neutraliser l&rsquo;exposition de notre portefeuille aux delta, gamma et vega en utilisant l&rsquo;algèbre linéaire.
+Les Greeks que nous souhaitons neutraliser dans le portefeuille actuel peuvent être exprimés sous forme de vecteur, l&rsquo;equation:</p>
+<p>[delta gamma vega] = [-523.88 -6.35 -815.54]</p>
+<p>Cela signifie qu&rsquo;en inversant la matrice contenant les valeurs Greeks pour les options négociables, nous pouvons trouver les montant d&rsquo;allocation(W) approprié de chaque greeks.</p>
+<p>[0.00605 0.00577, 0.77823 0.74127]*[W1, W2] = [6.35, 815.54]
+W1:montant d&rsquo;allocation de notre gamma
+W2: montant d&rsquo;allocation de notre vega
+Ce montant d&rsquo;allocation(W) nous permettra de determiner quel montant il attribuer a gamma ou vega pour supprimer les risks du portefeuille.</p>
+<p>Nous pouvons le faire en utilisant Python…
+Remarque : Bien que nous ayons une position de vente dans l&rsquo;option d&rsquo;origine, nous multiplions par un 1000 positif car nous voulons inverser la matrice vers une position positive(achat) de gamma, vega:</p>
+<p>[W1, W2] = [0.00605 0.00577, 0.77823 0.74127]^(-1)*[6.35, 815.54]</p>
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/9.png"/>
+</figure>
+
+<p>result:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/10.png"/>
+</figure>
+</p>
+<p>Nous avons effectivement trouvé l&rsquo;inverse de la matrice, le produit scalaire sera les montants d&rsquo;allocation résultants pour les deux options négociables (A et B)…</p>
+<p>code:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/11.png"/>
+</figure>
+</p>
+<p>result:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/12.png"/>
+</figure>
+</p>
+<p>En utilisant ces montants d&rsquo;allocation, nous aurons neutralisé efficacement l&rsquo;exposition aux gamma et vega…</p>
+<p>code:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/13.png"/>
+</figure>
+</p>
+<p>result:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/14.png"/>
+</figure>
+</p>
+<p>Maintenant que l&rsquo;exposition au gamma et au vega est neutralisée, nous devons neutraliser notre nouvelle exposition au delta. Pour trouver notre nouvelle exposition, nous prenons la somme du produit de toutes les positions d&rsquo;options de notre portefeuille avec leurs deltas respectifs.</p>
+<p>code:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/15.png"/>
+</figure>
+</p>
+<p>resultat:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/16.png"/>
+</figure>
+</p>
+<p>Après avoir multiplié nos nouvelles positions d&rsquo;options par les greeks d&rsquo;origine, nous constatons que notre position delta nette est de -46. Cela signifie qu&rsquo;en achetant 46 actions de l&rsquo;actif sous-jacent (NVDA), nous aurons un portefeuille neutre delta, gamma et vega. Cela signifie que la valeur de notre portefeuille d&rsquo;options ne changera pas en cas de changement du prix de l&rsquo;actif sous-jacent, de la volatilité de l&rsquo;actif sous-jacent.</p>
+<p>Portefeuille final delta, gamma et Vega:</p>
+<p>-1000 NVDA Calls (vente call)
+8641 Call A Options (achat call)
+-8006 Call B Options (vente call)
+46 Shares of NVDA (action NVDA)</p>
+<p>Verification de la neutralité du portefeuille
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/17.png"/>
+</figure>
+</p>
+<p>resultat:
+<figure><img src="https://antonio2505.github.io/kassi_portfolio/images/delta_hedging/18.png"/>
+</figure>
+</p>
+<p>Il peut être implémenté directement dans un système de trading algorithmique.
+Pour toute correction ou suggestion, je serai tres ravi de les recevoir, je suis toujours en constant apprentissage.</p>
+<p><a href="https://github.com/antonio2505/Projects_investment">Lien vers le référentiel GitHub</a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="https://antonio2505.github.io/kassi_portfolio/fr/tags/scene" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">scene</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Lié</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="https://antonio2505.github.io/kassi_portfolio/fr/post/projet-1/">Projets 1: Optimisation de portefeuille</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://antonio2505.github.io/kassi_portfolio/" >
+    &copy;  Antoine Kassi 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/antonio2505" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/antoine-kassi-09003a123/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

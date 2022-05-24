@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science Portfolio on Antoine Kassi</title>
+    <link>https://antonio2505.github.io/antoine_kassi/en/</link>
+    <description>Recent content in Data Science Portfolio on Antoine Kassi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Apr 2022 11:00:59 -0400</lastBuildDate><atom:link href="https://antonio2505.github.io/antoine_kassi/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project 2: Algorithmic Trading</title>
+      <link>https://antonio2505.github.io/antoine_kassi/en/post/project-2/</link>
+      <pubDate>Sun, 10 Apr 2022 11:00:59 -0400</pubDate>
+      
+      <guid>https://antonio2505.github.io/antoine_kassi/en/post/project-2/</guid>
+      <description>Algorithmic trading is a method of executing orders using automated pre-programmed trading instructions accounting for variables such as time, price, and volume. This type of trading attempts to leverage the speed and computational resources of computers relative to human traders.
+Algorithmic Trading The majority of traders lose money. They lose money not because they don&amp;rsquo;t understand the market, but simply because their trading decisions are not based on solid research and proven trading methods.</description>
+    </item>
+    
+    <item>
+      <title>Projets 3: Portfolio Optimization</title>
+      <link>https://antonio2505.github.io/antoine_kassi/en/post/project-1/</link>
+      <pubDate>Tue, 29 Mar 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://antonio2505.github.io/antoine_kassi/en/post/project-1/</guid>
+      <description>Modern Portfolio Theory It was formulated in the 1950 by Harry Markowitz.
+what is the main idea? A single stock is quite unpredictable or risky: we do not know for certain whether a stock will go up or down.
+ But we may combine several stocks, in order to reduce risk as much as possible. DIVERSIFICATION.
+when a given value of stock goes down another goes up. Combining assets is the main idea: it is the same as the black-scholes Model.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://antonio2505.github.io/antoine_kassi/en/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://antonio2505.github.io/antoine_kassi/en/about/</guid>
+      <description>Data scientist motivated and passionate about financial markets and algorithmic trading, I want to work as a Data Scientist. My goal is to be one of the best data scientist and trader, using my programming skills to crack the financial markets. I am passionate about self-learning, all my skills in programming and in the financial markets, I acquired them through books, training, tutorials and research.
+Skills area:
+ Data Analysis Data science Portfolio Analysis Options Trading or Stock Trading Quantitative Analysis Quantitative Trading  I am currently looking for an internship in one of these fields above to progress in my career.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://antonio2505.github.io/antoine_kassi/en/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://antonio2505.github.io/antoine_kassi/en/contact/</guid>
+      <description>Follow me on these social media platforms.
+   Platform URL     Gmail: knogbou@gmail.com   LinkedIn: https://www.linkedin.com/in/antoine-kassi-09003a123/   GitHub: https://github.com/antonio2505   WhatsApp: https://wa.me/+22569908862    </description>
+    </item>
+    
+  </channel>
+</rss>

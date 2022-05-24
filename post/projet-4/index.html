@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Projets 4: Arbritrage Statistique | Antoine Kassi</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Arbritrage statistique par le Trading de Paire">
+    <meta name="generator" content="Hugo 0.96.0" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://antonio2505.github.io/antoine_kassi/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Projets 4: Arbritrage Statistique" />
+<meta property="og:description" content="Arbritrage statistique par le Trading de Paire" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://antonio2505.github.io/antoine_kassi/post/projet-4/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-29T10:58:08-04:00" />
+<meta property="article:modified_time" content="2022-04-29T10:58:08-04:00" /><meta property="og:site_name" content="Antoine Kassi" />
+
+<meta itemprop="name" content="Projets 4: Arbritrage Statistique">
+<meta itemprop="description" content="Arbritrage statistique par le Trading de Paire"><meta itemprop="datePublished" content="2022-04-29T10:58:08-04:00" />
+<meta itemprop="dateModified" content="2022-04-29T10:58:08-04:00" />
+<meta itemprop="wordCount" content="1525">
+<meta itemprop="keywords" content="scene," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Projets 4: Arbritrage Statistique"/>
+<meta name="twitter:description" content="Arbritrage statistique par le Trading de Paire"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://antonio2505.github.io/antoine_kassi/images/pairs_trading/pair_trade.png');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://antonio2505.github.io/antoine_kassi/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Antoine Kassi
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://antonio2505.github.io/antoine_kassi/aboutfr/" title="A Propos page">
+              A Propos
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://antonio2505.github.io/antoine_kassi/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://antonio2505.github.io/antoine_kassi/post/" title="Projets page">
+              Projets
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://github.com/antonio2505" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/antoine-kassi-09003a123/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Projets 4: Arbritrage Statistique</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Arbritrage statistique par le Trading de Paire
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJETS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://antonio2505.github.io/antoine_kassi/post/projet-4/&amp;title=Projets%204:%20Arbritrage%20Statistique" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Projets 4: Arbritrage Statistique</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-04-29T10:58:08-04:00">April 29, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/pair_trade.png"/>
+</figure>
+
+<h1 id="pairs-trading-strategy">PAIRS TRADING STRATEGY</h1>
+<p>PAIRS TRADING est une stratégie de market-neutral trading  permettant aux traders de profiter pratiquement toutes les conditions du marché : tendance haussière, tendance baissière ou mouvement latéral. Cette stratégie est classée comme une stratégie d&rsquo;arbitrage statistique et de négociation de convergence(Hedging) <a href="https://en.wikipedia.org/wiki/Pairs_trade">wikipedia</a></p>
+<ul>
+<li>Qu&rsquo;est ce que market-neutral trading strategy ?</li>
+</ul>
+<p>market-neutral trading strategy est un type de stratégie d&rsquo;investissement par un investisseur ou un gestionnaire d&rsquo;investissement qui cherche à profiter à la fois de la hausse et de la baisse des prix sur un ou plusieurs marchés tout en essayant d&rsquo;éviter complètement  prise la de risque de marché.</p>
+<p>Le Trading de Paires est classée comme une stratégie d&rsquo;arbitrage statistique.</p>
+<ul>
+<li>Qu&rsquo;est ce que la stratégie d&rsquo;arbitrage statistique ?</li>
+</ul>
+<p>L&rsquo;arbitrage est une stratégie d&rsquo;investissement dans laquelle un investisseur achète et vend simultanément un actif sur différents marchés pour profiter d&rsquo;une différence de prix et générer un profit.</p>
+<h2 id="1--partie-i-implementation-de-la-strategy">1- PARTIE I: IMPLEMENTATION DE LA STRATEGY</h2>
+<h3 id="installation-des-libraries">Installation des libraries</h3>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/library.png"/>
+</figure>
+
+<ol>
+<li>Selection des Stocks et  Identification de Pairs de stocks cointegrer.</li>
+<li>Effectuer le test de stationariter pour la selection des pairs.</li>
+<li>Generer le Signal de Trading avec Z-Score test.</li>
+<li>Calcule de de Gain et perte de notre portefeuil</li>
+</ol>
+<h3 id="1-selection-des-stocks-et-identification-de-pairs-de-stocks-cointegrer">1. Selection des Stocks et Identification de Pairs de stocks cointegrer.</h3>
+<p><figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/1.png"/>
+</figure>
+
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/2.png"/>
+</figure>
+</p>
+<h3 id="person-correlation">Person Correlation</h3>
+<p><figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/3.png"/>
+</figure>
+
+resultat:</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/corr.png"/>
+</figure>
+
+<h3 id="person-correlation-1">Person Correlation</h3>
+<p>Le coefficient de corrélation de Pearson varie entre +1 et -1 et est une mesure de la relation entre deux variables. La valeur +1 indique une forte corrélation positive, zéro indique l&rsquo;absence de relation et -1 indique une forte relation négative. Nous pouvons voir dans la carte thermique ci-dessous qu&rsquo;il existe plusieurs paires avec une forte corrélation positive.</p>
+<h3 id="cointegration-des-paires">Cointegration des paires</h3>
+<p>Qu&rsquo;est ce que la cointegration ?</p>
+<p>La Cointegration est une methode statistique utilisee pour tester la Correlation entre deux ou plusieurs series temporaires dans un longue durée ou pour un temps specifique.
+deux series peuvent d&rsquo;etre correlees mais pas cointegrees, vise versa.
+Pour approuver la cointegration nous allons determiner la p-value de chaque paire et ensuite effectuer un test stationnaire.</p>
+<h3 id="recherche-des-paires-cointegrees">Recherche des paires cointegrees</h3>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/4.png"/>
+</figure>
+
+<h3 id="calcule-de-la-p-value-des-paires">Calcule de la P-value des Paires</h3>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/5.png"/>
+</figure>
+
+<p>resultat:
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/pvalue.png"/>
+</figure>
+</p>
+<p>Analysons également le résultat du test de cointégration. Nous pouvons voir dans ci-dessus qu&rsquo;il existe de nombreuses paires avec une pvalue inférieure à 0,05. Cela signifie que pour ces paires, nous pouvons rejeter l&rsquo;hypothèse nulle et qu&rsquo;elles peuvent être cointégrées</p>
+<h3 id="effectuer-un-test-stationnaire-pour-la-paire-sélectionnée">Effectuer un test stationnaire pour la paire sélectionnée</h3>
+<p>Maintenant, nous avons de nombreuses paires pour la stratégie où la pvalue est inférieure à 0,05. La sélection de la bonne paire est de la plus haute importance car la stratégie ne fonctionnera pas bien si les prix évoluent exactement ensemble. Ils doivent être divergents et mean-reverting pour que notre stratégie soit rentable.</p>
+<p>Allons-y avec la paire (&lsquo;CTXS&rsquo;, &lsquo;HPQ&rsquo;), CTXS: Citrix Systems, Inc et HPQ: HP Inc,et testons davantage la stationnarité de la propagation à l&rsquo;aide du <a href="https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test">test Augmented Dickey-Fuller</a>. Il est important que la propagation soit stationnaire. Une série chronologique est considérée comme stationnaire si des paramètres tels que la moyenne et la variance ne changent pas dans le temps. Nous allons d&rsquo;abord calculer <a href="https://www.investopedia.com/terms/h/hedgeratio.asp">le ratio de couverture(hedge ratio)</a> entre ces deux stockers en utilisant la régression <a href="https://en.wikipedia.org/wiki/Ordinary_least_squares">OLS(ordinary least square)</a>. Ensuite, en utilisant le ratio de couverture(hedge ratio), nous calculerons le spread(la difference de price entre 2 stock) et exécuterons le test Augmented Dickey-Fuller.</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/6.png"/>
+</figure>
+
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/7.png"/>
+</figure>
+
+<h3 id="effections-notre-ols-regression">effections notre OLS regression</h3>
+<p>model=sm.OLS(train.asset1, train.asset2).fit()
+resultat
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/ols.png"/>
+</figure>
+</p>
+<p>print(&lsquo;Hedge Ratio = &lsquo;, model.params[0])
+Hedge Ratio =  4.497688958649726</p>
+<h3 id="calculate-la-dispersion">calculate la dispersion</h3>
+<p>spread = train.asset1 - model.params[0] * train.asset2</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/spread.png"/>
+</figure>
+
+<h3 id="augmented-dickey-fuller-test">Augmented Dickey-Fuller test</h3>
+<p>adf = adfuller(spread, maxlag = 1)
+print(&lsquo;Critical Value = &lsquo;, adf[0])
+Critical Value =  -2.3204852154340516</p>
+<h3 id="valeurs-critiques">Valeurs Critiques</h3>
+<p>print(adf[4])
+{&lsquo;1%&rsquo;: -3.434617276362776, &lsquo;5%&rsquo;: -2.863424739608777, &lsquo;10%&rsquo;: -2.5677734071449034}</p>
+<h3 id="interpretation-de-la-propagationspread">Interpretation de la propagation(spread)</h3>
+<p>Une valeur  R-square et une pvalue proche de zéro de la régression OLS suggèrent une très forte corrélation entre ces deux actions. La propagation(spread) semble stationnaire et la valeur Dickey-Fuller est de 0.005, ce qui est inférieur à la valeur au niveau de signification de 5 %. Par conséquent, nous sommes en mesure de rejeter l&rsquo;hypothèse nulle selon laquelle la propagation a une racine unitaire et pouvons conclure qu&rsquo;il s&rsquo;agit de stationnarité.</p>
+<h3 id="générer-des-signaux-de-trading-à-laide-du-z-score">Générer des signaux de trading à l&rsquo;aide du z-score</h3>
+<p>Nous avons utilisé l&rsquo;ensemble de données d&rsquo;entraînement(train set) jusqu&rsquo;à présent pour finaliser la paire d&rsquo;actions pour notre stratégie. À partir de maintenant, nous utiliserons l&rsquo;ensemble de données de test pour nous assurer que la génération de signaux de trading et le backtesting utilisent un ensemble de données d&rsquo;échantillon. Nous utiliserons le score z du rapport entre les deux cours boursiers pour générer des signaux de trading et définir les seuils supérieur et inférieur. Cela nous indiquera à quel point un prix est éloigné de la valeur moyenne de la population. S&rsquo;il est positif et que la valeur est supérieure aux seuils supérieurs, le cours de l&rsquo;action est supérieur à la valeur moyenne du cours. Par conséquent, son prix devrait baisser, nous voulons donc vendre cette action et acheter l&rsquo;autre.</p>
+<p>[voir code](code link:)</p>
+<h2 id="1-definir-la-fonction-_zscore_">1. Definir la fonction <em>zscore</em></h2>
+<p>def zscore(series):
+return (series - series.mean()) / np.std(series)</p>
+<ol start="2">
+<li>
+<p>Creer une dataframe pour les Signaux des 2 stocks avec leur prix en utilisant les donnee du test dataset</p>
+</li>
+<li>
+<p>Calculez le score z pour le rapport et définissez les seuils supérieur et inférieur avec plus et moins un écart type.</p>
+</li>
+<li>
+<p>Créez une colonne de signal avec la logique suivante</p>
+</li>
+</ol>
+<ul>
+<li>Si le score z est supérieur au seuil supérieur, nous aurons -1 ( vendre),</li>
+<li>si le score z est inférieur au seuil inférieur, +1 (Acheter) et la valeur par défaut est nul pour aucun signal.</li>
+</ul>
+<p>Prenez la différence de premier ordre de la colonne de signal pour obtenir la position du stock. Si c&rsquo;est +1 alors nous sommes en Achat, -1 alors vente et 0 si pas de position.</p>
+<p>Le deuxième signal sera juste à l&rsquo;opposé du premier, ce qui signifie que nous sommes Achat sur une action et simultanément courts sur l&rsquo;autre. De même, prenez la différence de premier ordre pour le deuxième signal et calculez la deuxième colonne de position.</p>
+<p>resultat:
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/signal.png"/>
+</figure>
+</p>
+<h1 id="2--partie-ii-bactesting">2- PARTIE II: BACTESTING</h1>
+<ul>
+<li>
+<p><code>Le backtesting</code> est une méthode pour voir dans quelle mesure une stratégie ou un modèle aurait fonctionné dans le passe. Le backtesting évalue la <code>viabilité d'une stratégie</code> de trading en découvrant comment elle se déroulerait à l&rsquo;aide de <code>données historiques</code>. Si le backtesting fonctionne, les traders et les analystes peuvent avoir la confiance nécessaire pour l&rsquo;utiliser <code>à l'avenir</code>.</p>
+</li>
+<li>
+<p>Le <code>backtesting</code> permet à un trader de <code>simuler une stratégie</code> de trading en utilisant des données historiques pour générer des résultats et analyser le <code>risque</code> et la <code>rentabilité</code> avant de risquer un <code>capital réel</code>.</p>
+</li>
+</ul>
+<h2 id="calcul-des-profits-et-pertes-du-portefeuille">Calcul des <code>profits</code> et <code>pertes</code> du portefeuille</h2>
+<p>Nous commencerons avec un capital initial de <code>$100 000</code> et calculerons le nombre maximum d&rsquo;actions en position pour chaque action en utilisant le capital initial. À un jour donné, le total des profits et pertes du premier stock sera le total de la détention de ce stock et de la position de trésorerie pour ce stock. De même, le profit et la perte pour le deuxième stock seront la détention totale du stock et les liquidités pour ce stock. Vous devez garder à l&rsquo;esprit que nous avons une position neutre sur le marché(market-neutral), ce qui signifie que nous sommes acheter et vendeur avec le même capital. Enfin, pour obtenir le total des profits et pertes, nous devons agréger ces deux éléments. Sur la base de la position des actions 1 et 2, nous calculons leurs rendements quotidiens respectifs.</p>
+<ul>
+<li>Nous commencerons avec un capital initial de $100 000 et calculerons le nombre maximum d&rsquo;actions en position pour chaque action en utilisant le capital initial.
+[voir code](code link:)</li>
+</ul>
+<p>Voir la performance du portefeuil:
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/portl.png"/>
+</figure>
+</p>
+<ul>
+<li>calcule de notre <a href="https://www.investopedia.com/terms/c/cagr.asp">CAGR(Compound Annual Growth Rate)</a></li>
+</ul>
+<p>Le taux CAGR est le taux de rendement  qui serait nécessaire pour qu&rsquo;un investissement passe de son solde initial à son solde final, en supposant que les bénéfices ont été réinvestis à la fin de chaque période de la durée de vie de l&rsquo;investissement.</p>
+<ul>
+<li>Les investisseurs peuvent comparer le CAGR de deux alternatives pour évaluer la performance d&rsquo;une action par rapport à d&rsquo;autres actions d&rsquo;un groupe de pairs ou d&rsquo;un indice de marché</li>
+</ul>
+<p>ou,</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/gar.png"/>
+</figure>
+
+<p>avec:
+m = 1/n</p>
+<p>n = Numbre d&rsquo;annee</p>
+<p>VF = Valuer Finale</p>
+<p>VI = Valeur iniatl</p>
+<p><a href="https://www.investopedia.com">investopedia</a>, l&rsquo;une de mes meilleurs plateforme pour apprendre le monde de la finance. Tres recommander.</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/8.png"/>
+</figure>
+
+<p>le <code>CAGR</code> de la stratégie est de <code>12,206%</code> ce qui semble prometteur, mais il y a beaucoup de choses à considérer avant de tirer un quelconque conclusion:</p>
+<h2 id="conlusion">Conlusion</h2>
+<p>Il y a toujours une limite à l&rsquo;utilisation de données historiques pour prévoir l&rsquo;avenir. La bonne performance de la strategies avec les donnee historiques ne provent pas que notre stategies aura une belle performance dans le future.</p>
+<p>Nous n&rsquo;avons pas pris en compte les coûts liés aux transactions, aux dérapages du marché etc. Normalement, une stratégie neutre au marché(market-neutral) se traduit par un nombre élevé de transactions impliquant plus de coûts liés aux transactions.
+La stratégie ne function ne pas correctement dans un marché illiquide.</p>
+<p>Cette strategies peut etre utilisée en combinaison d&rsquo;une autre strategie pour reduire ou limiter les risks, par example les options<a href="https://www.investopedia.com/terms/v/verticalspread.asp">(vertical spread)</a>, aussi les peut etre ulitiser un systeme de trading automatisé.</p>
+<p><a href="https://github.com/antonio2505/Pairs-Trading/blob/main/Pairs_Trading.ipynb">Lien vers le référentiel GitHub</a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="https://antonio2505.github.io/antoine_kassi/tags/scene" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">scene</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Lié</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="https://antonio2505.github.io/antoine_kassi/post/projet-3/">Projets 3: Couverture de portefeuille algorithmique (Hedging)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://antonio2505.github.io/antoine_kassi/post/projet-1/">Projets 1: Optimisation de portefeuille</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://antonio2505.github.io/antoine_kassi/" >
+    &copy;  Antoine Kassi 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/antonio2505" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/antoine-kassi-09003a123/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>
