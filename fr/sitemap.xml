@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://antonio2505.github.io/antoine_kassi/</loc>
-    <lastmod>2022-04-29T10:58:08-04:00</lastmod>
+    <lastmod>2022-05-25T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -17,13 +17,13 @@
                 href="https://antonio2505.github.io/antoine_kassi/"
                 />
   </url><url>
-    <loc>https://antonio2505.github.io/antoine_kassi/post/projet-4/</loc>
-    <lastmod>2022-04-29T10:58:08-04:00</lastmod>
+    <loc>https://antonio2505.github.io/antoine_kassi/post/projet-5/</loc>
+    <lastmod>2022-05-25T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://antonio2505.github.io/antoine_kassi/tags/scene/</loc>
-    <lastmod>2022-04-29T10:58:08-04:00</lastmod>
+    <lastmod>2022-05-25T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -38,7 +38,7 @@
                 />
   </url><url>
     <loc>https://antonio2505.github.io/antoine_kassi/tags/</loc>
-    <lastmod>2022-04-29T10:58:08-04:00</lastmod>
+    <lastmod>2022-05-25T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -51,6 +51,11 @@
                 hreflang="fr"
                 href="https://antonio2505.github.io/antoine_kassi/tags/"
                 />
+  </url><url>
+    <loc>https://antonio2505.github.io/antoine_kassi/post/projet-4/</loc>
+    <lastmod>2022-04-29T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://antonio2505.github.io/antoine_kassi/post/projet-3/</loc>
     <lastmod>2022-04-24T10:58:08-04:00</lastmod>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Projet 5: Options Trading Strategies with Python | Antoine Kassi</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee">
+    <meta name="generator" content="Hugo 0.96.0" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://antonio2505.github.io/antoine_kassi/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Projet 5: Options Trading Strategies with Python" />
+<meta property="og:description" content="Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://antonio2505.github.io/antoine_kassi/post/projet-5/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-25T10:58:08-04:00" />
+<meta property="article:modified_time" content="2022-05-25T10:58:08-04:00" /><meta property="og:site_name" content="Antoine Kassi" />
+
+<meta itemprop="name" content="Projet 5: Options Trading Strategies with Python">
+<meta itemprop="description" content="Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee"><meta itemprop="datePublished" content="2022-05-25T10:58:08-04:00" />
+<meta itemprop="dateModified" content="2022-05-25T10:58:08-04:00" />
+<meta itemprop="wordCount" content="1797">
+<meta itemprop="keywords" content="scene," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Projet 5: Options Trading Strategies with Python"/>
+<meta name="twitter:description" content="Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://antonio2505.github.io/antoine_kassi/images/optioimage/5.png');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://antonio2505.github.io/antoine_kassi/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Antoine Kassi
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://antonio2505.github.io/antoine_kassi/aboutfr/" title="A Propos page">
+              A Propos
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://antonio2505.github.io/antoine_kassi/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://antonio2505.github.io/antoine_kassi/post/" title="Projets page">
+              Projets
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://github.com/antonio2505" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/antoine-kassi-09003a123/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Projet 5: Options Trading Strategies with Python</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJETS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://antonio2505.github.io/antoine_kassi/post/projet-5/&amp;title=Projet%205:%20Options%20Trading%20Strategies%20with%20Python" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Projet 5: Options Trading Strategies with Python</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-05-25T10:58:08-04:00">May 25, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Dans ce projet je presenterai un nombre de strategie dont les speculators entreront pour se faire du profit. Le lien du code dans mon github.
+Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee; ces strategies seront discutées.</p>
+<p>Les options sont des contrats dérivés qui donnent à l&rsquo;acheteur le droit, mais non l&rsquo;obligation, d&rsquo;acheter(Call) ou de vendre(Put) un montant fixe d&rsquo;un actif sous-jacent à un prix fixe à l&rsquo;expiration du contrat ou avant.</p>
+<h4 id="les-avantages-de-trader-les-options">Les avantages de trader les Options</h4>
+<ul>
+<li>
+<p>Utilisés comme instrument de couverture (hedging), les contrats d&rsquo;options peuvent fournir aux investisseurs des stratégies de réduction des risques (risk management).</p>
+</li>
+<li>
+<p>Pour les spéculateurs, les options peuvent offrir des moyens moins coûteux a l&rsquo;achat ou vente sur le marché avec un risque limité.
+Par example:</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>l&rsquo;action ABC est negocié a $50. L&rsquo;achat de 100 actions d&rsquo;ABC coutera $5000. nous risquons de perdre tout notre Investment.</p>
+</li>
+<li>
+<p>Achat Option Call d&rsquo;ABC, avec un strike $50 cout $6/action. un contrat contient 100 actions, soit nos depenses totals est $6*100 soit $600 (on depense seulement que $600 au lieu de $5000)et qui represent notre perte maximal si l&rsquo;action revient a chuter jusqu&rsquo;a zero.</p>
+</li>
+</ul>
+<p>ces strategies peuvent etre utilisee dans une situation de trading automatisee ou algoritmique pour suprimer l&rsquo;emotion dans les  decisions de trading.</p>
+<p>Note:
+K : strike ou prix d&rsquo;exercice
+C : valeur ou prix de l&rsquo;Option</p>
+<h3 id="1-bull-call-spread">1. Bull Call Spread</h3>
+<p>Bull Call Spread est une stratégie dans laquelle un trader achète une option Call et en vend (Call) une autre. Cette stratégie doit être utilisée lorsque le trader pense que l&rsquo;action va augmenter en valeur. <em>L&rsquo;avantage de la combinason d&rsquo;achat et vente (spread) de contract perment de reduir le cout de contrat ou de note option (pareil pour Bear Call Spread, Bull Put Spread,et Bear Put Spread)</em></p>
+<p>Option1 : k1, C1
+Option2 : k2, C2</p>
+<ul>
+<li>
+<p>profit Maximum : (K1 - K2) - (C2 - C1), K1 &gt; K2</p>
+</li>
+<li>
+<p>Perte Maximum : C1 - C2</p>
+</li>
+</ul>
+<p>example:
+Option1 C1 : Cette option a un prix d&rsquo;exercice(strike) de 130 $ et se vend actuellement à 5 $</p>
+<p>Option 2 C2 : Cette option a un prix d&rsquo;exercice(strike) de 90 $ et se vend actuellement à 20 $</p>
+<p>Profit Maximum : (K1 - K2) - (C2 - C1) = (130-90)-(20-5) = $25
+Perte Maximum : C1 - C2 = 5 - 20 = -$15</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/1.1.png"/>
+</figure>
+
+<p>Le diagramme ci-dessous montre que pour des cours boursiers futurs plus élevés à la date d&rsquo;expiration, la position affiche un profit jusqu&rsquo;à un maximum de 25 $ et pour des cours inférieurs, la position perd de l&rsquo;argent jusqu&rsquo;à une perte maximale de 15 $.</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/1.png"/>
+</figure>
+
+<h3 id="2-bear-call-spread">2. Bear Call Spread</h3>
+<p>Bear Call Spread est une stratégie qui est opposee a celle de Bull Call Spread. Dans cette stratégie, nous vendons une option Call avec un prix d&rsquo;exercice inférieur(strike) et en achetons une autre avec un prix d&rsquo;exercice plus élevé.  Cette stratégie doit être utilisée lorsque le trader pense que l&rsquo;action va baisser en valeur.
+Le trader collecte le premium ou montant de la valeur de l&rsquo;option comme gain.</p>
+<p>Option1 : k1, C1
+Option2 : k2, C2</p>
+<ul>
+<li>
+<p>profit Maximum : C1 - C2</p>
+</li>
+<li>
+<p>Perte Maximum : (K1 - K2) + (C2 - C1)</p>
+</li>
+</ul>
+<p>example:
+Option1 : Cette option a un prix d&rsquo;exercice(strike) de $30 et se vend actuellement à $2.50</p>
+<p>Option 2 : Cette option a un prix d&rsquo;exercice(strike) de $35 et se vend actuellement à $0.5</p>
+<p>Profit Maximum : C1 - C2 = 2.5 - 0.5 = -$2.00
+Perte Maximum : (K1 - K2) + (C2 - C1) = (30-35)+(2.50-0.5) = -$3.00</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/2.2.png"/>
+</figure>
+
+<p>La section verte est limitée à un profit maximum de $2 et la section rouge est limitée à une perte maximale de $3.00 comme nous l&rsquo;avons vu ci-dessus.
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/2.png"/>
+</figure>
+</p>
+<h3 id="3-bull-put-spread">3. Bull Put Spread</h3>
+<p>Bull Put Spread utilisant des options de vente(Put) peut également être construit. Encore une fois, c&rsquo;est une stratégie que nous mettrons en œuvre si nous estimions que le prix de l&rsquo;action augmentera, tout en limitant notre baisse. Puisque nous nous attendons à ce que le prix augmente, nous vendrons une option Put avec un prix d&rsquo;exercice plus élevé et en acheter un autre avec un prix d&rsquo;exercice inférieur, le prix d&rsquo;exercice inférieur que nous achetons agit comme un moyen de limiter nos pertes si l&rsquo;action évolue contre nous.</p>
+<p>example:
+Option1 : Cette option a un prix d&rsquo;exercice(strike) de $110 et se vend actuellement à $15, supposons que le prix actuel du stock est a $100</p>
+<p>Option 2 : Cette option a un prix d&rsquo;exercice(strike) de $90 et se vend actuellement à $4</p>
+<p>Profit Maximum : C1 - C2 = 15 - 4 = -$11
+Perte Maximum : -(K1 - K2) + (C1 - C2) = (110-90)-(15-4) = -$9
+C1 &gt; C2</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/3.3.png"/>
+</figure>
+
+<p>Comme nous le voyons sur le diagramme ci-dessous, la stratégie rapporte un profit jusqu&rsquo;à un maximum de $11 a la hausse de l&rsquo;action et limite vos pertes à un maximum de $9.</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/3.png"/>
+</figure>
+
+<h3 id="4-bear-put-spread">4. Bear Put Spread</h3>
+<p>Bear Put Spread peut être mis en place si le trader souhaite prendre position sur le titre dont la valeur diminue. Pour prendre cette position, nous devons vendre une option Put avec un prix d&rsquo;exercice inférieur et en acheter une autre avec un prix d&rsquo;exercice plus élevé. C&rsquo;est un bon moyen de parier contre une action tout en ayant des limités.</p>
+<p>Option1 : Cette option a un prix d&rsquo;exercice(strike) de $90 et se vend actuellement à $3, supposons que le prix actuel du stock est a $100</p>
+<p>Option 2 : Cette option a un prix d&rsquo;exercice(strike) de $80 et se vend actuellement à $1</p>
+<p>Profit Maximum : (K1 - K2) - (C1 - C2) = (90-80)-(3-1) = $8
+Perte Maximum : -(C1 - C2) = -(3 - 1) = -$2</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/4.4.png"/>
+</figure>
+
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/4.png"/>
+</figure>
+
+<h3 id="5-straddle-strategy">5. Straddle Strategy</h3>
+<p>straddle est une stratégie dans laquelle un trader achète à la fois une option Call et une option Put au même prix d&rsquo;exercice. L&rsquo;idée ici est que le trader bénéficiera d&rsquo;un mouvement important du prix de l&rsquo;action sous-jacente, quelle que soit la direction du mouvement. Il s&rsquo;agit d&rsquo;une stratégie particulièrement utile lorsqu&rsquo;un trader prédit une forte augmentation de la volatilite du prix d&rsquo;un actif, mais qu&rsquo;il n&rsquo;est pas sûr de la direction du mouvement. Nous pouvons acheter à la fois un put et un call.</p>
+<p>Puisque nous achetons une option Call, le profit potentiel de l&rsquo;entrée dans cette stratégie est potentiellement illimité, cependant, puisque nous achetons également une option Put, le coût d&rsquo;entrée dans une stratégie comme celle-ci est plus élevé que le simple achat de l&rsquo;une ou l&rsquo;autre.</p>
+<p>Prenons un exemple, Supposons que les bénéfices des sociétés ABC sortent la semaine prochaine, vous observez une option Call et une option Put sur le marché se vendant 5 $ chacun à un prix d&rsquo;exercice de 100 $ et l&rsquo;action se négocie actuellement à 100 $ également.</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/5.5.png"/>
+</figure>
+
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/5.png"/>
+</figure>
+
+<h3 id="6-butterfly-strategy">6. Butterfly Strategy</h3>
+<p>Comme nous l&rsquo;avons mentionné pour la stratégie de short straddle, l&rsquo;inconvénient(la perte) est potentiellement illimité pour entrer dans cette position. Supposons qu&rsquo;un trader souhaite cibler la même zone de la courbe, mais souhaite limiter sa baisse, une stratégie de Butterfly est une bonne option dans ce cas. La stratégie gagne de l&rsquo;argent si le cours de l&rsquo;action sous-jacente reste autour de son niveau actuel(pas assez de mouvement du prix de l&rsquo;actif). Pour entrer dans une stratégie Butterfly, nous devrions acheter un Call At-The-Money(k superieur au prix actuel de l&rsquo;actif) et un Call Out-The-Money(k inferieur au prix actuel de l&rsquo;actif), pour équilibrer les positions Call, nous vendrions 2 options au même prix d&rsquo;exercice. Rappelez-vous la discussion sur un short straddle, où le trader considère que le prix sous-jacent sera approximativement au même niveau qu&rsquo;il est maintenant, la stratégie Butterfly est peut-être une meilleure option car le gain est réalisé si le point de vue du trader est correct, avec une perte limité si le titre évolue fortement dans les deux sens.</p>
+<p>Example:
+Une action se vend actuellement à $100 et un trader qui souhaite prendre position sur le prix de l&rsquo;action dans 1 mois(date d&rsquo;echeance) sera approximativement là où il se trouve actuellement ($100).</p>
+<p>Option 1 : ACHETEZ une option Call avec un prix d&rsquo;exercice de $94 pour $8</p>
+<p>Option 2 : ACHETEZ une option Call avec un prix d&rsquo;exercice de $106 pour $2</p>
+<p>Option 3 : VENDRE DEUX options d&rsquo;achat avec un prix d&rsquo;exercice de $100 pour $4 chacune pour un total de $8.</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/6.6.png"/>
+</figure>
+
+<p>Remarquez sur le graphique ci-dessous que le profit maximum est réalisé si le cours de l&rsquo;action à l&rsquo;expiration est égal au prix d&rsquo;exercice des deux Call que nous avons vendu lors de l&rsquo;entrée dans la position. Cela peut être une meilleure option que le short straddle si nous voulions considérer que le prix de l&rsquo;action sera autour de son niveau actuel, car la baisse est limitée.</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/6.png"/>
+</figure>
+
+<p>Bien sûr, nous pouvons également prendre une position de vente Butterfly. Cette position peut être prise si nous voulions considérer que le titre est susceptible de s&rsquo;éloigner de son niveau actuel, mais nous voulons également réduire la baisse.</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/7.7.png"/>
+</figure>
+
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/7.png"/>
+</figure>
+
+<h3 id="7-strangle-strategy">7. Strangle Strategy</h3>
+<p>Une stratégie Strangle est similaire à un straddle en ce sens que le trader veut prendre une position qui profitera d&rsquo;un changement important du cours de l&rsquo;action sous-jacente. La différence entre un Strangle et un straddle est qu&rsquo;avec un Strangle, les prix d&rsquo;exercice des deux options sont différents alors que dans un straddle, ils sont identiques. Entrer dans un Strangle est moins cher qu&rsquo;un straddle, mais le stock devra se déplacer plus loin réalise un profit.</p>
+<p>Example:</p>
+<p>Considérez une action qui se négocie actuellement à $100 par action, vous observez deux options sur le marché.</p>
+<p>Option 1 : Une option d&rsquo;achat à $4 avec un prix d&rsquo;exercice à $130</p>
+<p>Option 2 : Une option de vente à $5 avec un prix d&rsquo;exercice à $70</p>
+<p>Pour entrer dans un Strangle, vous achèteriez ces deux options. Pour que cette stratégie rapporte de l&rsquo;argent, le stock doit être inférieur à $61 (70-9) ou supérieur à $139 (130+9). Cela est dû au fait que le coût d&rsquo;entrée dans la stratégie est de 9 $ et que pour gagner de l&rsquo;argent, nous devons être au-dessus / en dessous de l&rsquo;un ou l&rsquo;autre des strikes à l&rsquo;expiration plus le coût d&rsquo;entrée.</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/8.8.png"/>
+</figure>
+
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/8.png"/>
+</figure>
+
+<h3 id="8-strategie-presonnalisée">8. Strategie presonnalisée</h3>
+<p>Bien sûr, les traders ne sont pas limités à ces stratégies définies et ils peuvent créer les leurs pour cibler différentes fourchettes de prix des actions à l&rsquo;expiration. Ci-dessous, nous donnons un exemple d&rsquo;achat et de vente d&rsquo;options Call et Put et montrons le diagramme de gain.</p>
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/9.9.png"/>
+</figure>
+
+<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/9.png"/>
+</figure>
+
+<p>vous pouvez essayer d&rsquo;ajouter différentes positions et voir le diagramme résultant.
+d&rsquo;autres strategies seront ajouter au fur et a mesure.</p>
+<p>Comme mentioner au debut, ce programme peut etre utilisé en trading automatisé.</p>
+<p><em>Les Options peuvent etre obtenu en temps-reel via Yahoo Fiance avec pandas (pandas_datareader)</em></p>
+<p><a href="https://github.com/antonio2505/OptionStrategies/blob/main/Options%20Strategies/OptionStrategies2.py">Lien vers le référentiel GitHub</a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="https://antonio2505.github.io/antoine_kassi/tags/scene" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">scene</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Lié</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="https://antonio2505.github.io/antoine_kassi/post/projet-4/">Projet 4: Arbritrage Statistique</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://antonio2505.github.io/antoine_kassi/post/projet-3/">Projet 3: Couverture de portefeuille algorithmique (Hedging)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://antonio2505.github.io/antoine_kassi/post/projet-1/">Projet 1: Optimisation de portefeuille</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://antonio2505.github.io/antoine_kassi/" >
+    &copy;  Antoine Kassi 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/antonio2505" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/antoine-kassi-09003a123/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>
