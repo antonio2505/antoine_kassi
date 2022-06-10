@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://antonio2505.github.io/antoine_kassi/en/</loc>
     <lastmod>2022-04-10T11:00:59-04:00</lastmod>
@@ -16,17 +17,23 @@
                 hreflang="en"
                 href="https://antonio2505.github.io/antoine_kassi/en/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/en/post/project-2/</loc>
     <lastmod>2022-04-10T11:00:59-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/en/post/project-1/</loc>
     <lastmod>2022-03-29T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/en/tags/scene/</loc>
     <lastmod>2022-03-29T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -41,7 +48,9 @@
                 hreflang="en"
                 href="https://antonio2505.github.io/antoine_kassi/en/tags/scene/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/en/tags/</loc>
     <lastmod>2022-03-29T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -56,7 +65,9 @@
                 hreflang="en"
                 href="https://antonio2505.github.io/antoine_kassi/en/tags/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/en/post/</loc>
     <lastmod>2022-03-02T12:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -71,11 +82,15 @@
                 hreflang="en"
                 href="https://antonio2505.github.io/antoine_kassi/en/post/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/en/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/en/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -89,7 +104,9 @@
                 hreflang="en"
                 href="https://antonio2505.github.io/antoine_kassi/en/categories/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/en/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -104,4 +121,5 @@
                 href="https://antonio2505.github.io/antoine_kassi/en/contact/"
                 />
   </url>
+  
 </urlset>

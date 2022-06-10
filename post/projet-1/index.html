@@ -7,7 +7,7 @@
     <title>Projet 1: Optimisation de portefeuille | Antoine Kassi</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Optimisation de portefeuille à l&#39;aide de la théorie Modern Portfolio Theory, modèle de Markowitz.">
-    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Hugo 0.68.3" />
     
     
     
@@ -32,14 +32,17 @@
     <meta property="og:title" content="Projet 1: Optimisation de portefeuille" />
 <meta property="og:description" content="Optimisation de portefeuille à l&#39;aide de la théorie Modern Portfolio Theory, modèle de Markowitz." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://antonio2505.github.io/antoine_kassi/post/projet-1/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://antonio2505.github.io/antoine_kassi/post/projet-1/" />
 <meta property="article:published_time" content="2022-03-29T10:58:08-04:00" />
 <meta property="article:modified_time" content="2022-03-29T10:58:08-04:00" /><meta property="og:site_name" content="Antoine Kassi" />
-
 <meta itemprop="name" content="Projet 1: Optimisation de portefeuille">
-<meta itemprop="description" content="Optimisation de portefeuille à l&#39;aide de la théorie Modern Portfolio Theory, modèle de Markowitz."><meta itemprop="datePublished" content="2022-03-29T10:58:08-04:00" />
+<meta itemprop="description" content="Optimisation de portefeuille à l&#39;aide de la théorie Modern Portfolio Theory, modèle de Markowitz.">
+<meta itemprop="datePublished" content="2022-03-29T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2022-03-29T10:58:08-04:00" />
-<meta itemprop="wordCount" content="817">
+<meta itemprop="wordCount" content="875">
+
+
+
 <meta itemprop="keywords" content="scene," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Projet 1: Optimisation de portefeuille"/>
 <meta name="twitter:description" content="Optimisation de portefeuille à l&#39;aide de la théorie Modern Portfolio Theory, modèle de Markowitz."/>
@@ -182,7 +185,8 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/Figure_4.png"/>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/Figure_4.png"/> 
 </figure>
 
 <h1 id="modern-portfolio-theory">Modern Portfolio Theory</h1>
@@ -190,100 +194,121 @@
 <h3 id="quelle-est-lidée-principale">Quelle est l&rsquo;idée principale?</h3>
 <p>Un seul titre est assez risqué : nous ne savons pas avec certitude
 si un stock va monter ou descendre.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/simgle_stock.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/simgle_stock.png"/> 
 </figure>
 
-<p>Mais on peut combiner plusieurs titres, afin de réduire au maximum le risque.
+<p>Mais on peut combiner plusieurs titres, afin de réduire au maximum le risque:
 <em>DIVERSIFICATION</em>.</p>
 <p>lorsqu&rsquo;une valeur d&rsquo;une action baisse, une autre augmente.
 La combinaison des actifs est l&rsquo;idée principale : c&rsquo;est la même chose que le modèle black-scholes.
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/several_stock.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/several_stock.png"/> 
 </figure>
 </p>
-<p>Le modèle a quelques hypothèses :
-* les rendement sont normalement distribues :
-avec une moyenne (u) et une variance (sigma)
-* les investisseurs sont rationels:
-l&rsquo;investisseur prendra plus de risques s&rsquo;il attend plus de récompenses</p>
+<h4 id="le-modèle-a-quelques-hypothèses-">Le modèle a quelques hypothèses :</h4>
+<ul>
+<li>les rendement sont normalement distribués :
+avec une moyenne (u) et une variance (sigma)</li>
+<li>les investisseurs sont rationels:
+l&rsquo;investisseur prendra plus de risques s&rsquo;il attend plus de récompenses.
+Pour 2 portefeuilles qui donnent le meme rendement, l&rsquo;investisseur choissira le portfeuille le moins risqué.</li>
+</ul>
 <p>faible risque  &ndash;&gt; faible rendement
 risque élevé   &ndash;&gt; rendement plus élevé</p>
-<p>Avec la théorie Markowitz, les investisseurs peuvent construire des portefeuilles optimaux
+<p>Avec la théorie de Markowitz, les investisseurs peuvent construire des portefeuilles optimaux
 offrant le maximum de rendement espéré possible pour un niveau de risque donné !!</p>
 <h3 id="quest-ce-quun-portefeuille-optimum-">Qu&rsquo;est-ce qu&rsquo;un portefeuille optimum ?</h3>
 <p>C&rsquo;est un portefeuille qui offre les meilleurs rendements pour un niveau de risque donné.</p>
 <h3 id="comment-calculer-le-rendement-dun-actif-">Comment calculer le rendement d&rsquo;un actif ?</h3>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/1.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/1.png"/> 
 </figure>
 
 <p>rendement quotidien:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/Figure_2.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/Figure_2.png"/> 
 </figure>
 </p>
 <p>portfolio return formula:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/portf_return_formula.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/portf_return_formula.png"/> 
 </figure>
 </p>
 <p>ce modèle repose sur des données historiques. Les données historiques signifient que la performance est supposée être le meilleur estimateur des performances futures.</p>
-<p>risque du portefeuille ?</p>
+<h4 id="risque-du-portefeuille-">risque du portefeuille ?</h4>
 <p>le risque a quelque chose à voir avec la volatilité,
-la volatilité a quelque chose à voir avec l&rsquo;écart type.</p>
+la volatilité a quelque chose à voir avec l'écart type.</p>
 <p>la covariance mesure comment 2 actions (ij) varient ensemble</p>
 <p>formule de la covariance
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/covariance_formula.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/covariance_formula.png"/> 
 </figure>
 </p>
-<p>covariance      ..&gt; covariance négative signifie que les rendements se déplacent en sens inverse
-..&gt; la covariance positive signifie que les rendements évoluent ensemble</p>
+<p>covariance</p>
+<ul>
+<li>..&gt; covariance négative signifie que les rendements se déplacent en sens inverse</li>
+<li>..&gt; la covariance positive signifie que les rendements évoluent ensemble</li>
+</ul>
 <p>La théorie de Markowitz porte sur la diversification : posséder des actifs (actions)
 avec une covariance positive élevée ne fournit pas beaucoup de <em>diversification!!!</em>.</p>
-<p>Le but de la diversification est d&rsquo;éliminer les fluctuations à long terme. Donc les actions non corrélées sont meilleures !!</p>
+<p>Le but de la diversification est d'éliminer les fluctuations à long terme. Donc les actions non corrélées sont meilleures !!</p>
 <p>Formule de la Variance
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/variance-formula.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/variance-formula.png"/> 
 </figure>
 </p>
 <p>pour calculer la variance du portefeuille, nous avons besoin des covariance des actions impliquées dans le portefeuille.</p>
 <p>La variance du portefeuille
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/variance-formula.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/variance-formula.png"/> 
 </figure>
 </p>
-<p><em>Frontière efficace</em>(<em>Efficient Frontier</em>)</p>
+<h3 id="frontière-efficaceefficient-frontier">Frontière efficace(Efficient Frontier)</h3>
 <p>chaque point du graphique représente w (allocation de chaque actif) &ndash;&gt; donc différents portefeuilles ou ensemble de portolios</p>
-<p>Un investisseur est intéressé par :
-1. le rendement maximal pour un niveau de risque fixe
-2. risque minimum pour un rendement fixe</p>
+<p>Un investisseur est intéressé par :</p>
+<ul>
+<li>le rendement maximal pour un niveau de risque fixe</li>
+<li>risque minimum pour un rendement fixe</li>
+</ul>
 <p>ces portefeuilles constituent ce que l&rsquo;on appelle la frontière efficiente !!!
 c&rsquo;est la principale caractéristique du modèle de Markowitz : l&rsquo;investisseur peut décider du
 risque ou le rendement espéré</p>
-<p>&ndash;&gt; <em>règle de base</em> : si vous voulez gagner de l&rsquo;argent, vous devez prendre des risques !!!</p>
+<p>&ndash;&gt; <em>règle de base : si vous voulez gagner de l&rsquo;argent, vous devez prendre des risques !!!</em></p>
 <h3 id="quest-ce-que-le-shape-ratio-">Qu&rsquo;est-ce que le Shape Ratio ?</h3>
-<p>c&rsquo;est l&rsquo;une des mesures de risque/rendement les plus importantes utilisées en finance
-&ndash;&gt; il permet de mesurer le rendement d&rsquo;un portefeuille par rapport au risk pris par l&rsquo;investisseur.
+<p>c&rsquo;est l&rsquo;une des mesures de risque/rendement les plus importantes utilisées en finance.</p>
+<p>&ndash;&gt; il permet de mesurer le rendement d&rsquo;un portefeuille par rapport au risk pris par l&rsquo;investisseur.
 un Shape Ratio S(x)&gt;1 est considéré comme bon.</p>
 <p>formule du Shape Ratio
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/variance-formula.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/variance-formula.png"/> 
 </figure>
 </p>
 <h2 id="ligne-dallocation-de-capital-capital-allocation-line">Ligne d&rsquo;allocation de capital (Capital allocation line:):</h2>
 <p>Le portefeuille optimal se situe sur la ligne d&rsquo;allocation du capital si le
-le portefeuille peut contenir des actions ainsi que des taux sans risque (obligations),
+le portefeuille peut contenir des actions ainsi que des taux sans risque,
 si vous ne voulez pas prendre de risque, vous serez sur le point sans risque qui contient
 zéro risque.</p>
 <h2 id="implementation-en-python">IMPLEMENTATION EN PYTHON</h2>
 <p><a href="link:">see code</a></p>
 <p>Rendements de chaque action depuis 13 ans :
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/2.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/2.png"/> 
 </figure>
 </p>
 <p>voir comment les actions sont corrélées les unes aux autres :
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/3.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/3.png"/> 
 </figure>
 </p>
 <p>Voir le rendement et la volatilité attendue du portefeuille :
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/4.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/4.png"/> 
 </figure>
 </p>
 <p>resultat:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/5.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/5.png"/> 
 </figure>
 </p>
 <p>Voir les pondérations optimales du portefeuille :
@@ -296,17 +321,18 @@ N&rsquo;investissez que dans FB, AMZN et AAPL. investir dans INTC nous rapporter
 <p>Expected return     = 0.24864315
 volatility          = 0.28413197
 Max Sharpe ratio    = 0.87509743</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optport/6.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optport/6.png"/> 
 </figure>
 
 <h2 id="conclusion">Conclusion:</h2>
-<p>L&rsquo;idéal principal de cette théorie est de combiner plusieurs actions, afin de réduire au maximum le risque, <em>DIVERSIFICATION</em>.
+<p>L&rsquo;idée principale de cette théorie est de combiner plusieurs actions, afin de réduire au maximum le risque, <em>DIVERSIFICATION</em>.
 L&rsquo;objectif de l&rsquo;investisseur est d&rsquo;obtenir des récompenses avec moins de risques, ou sans risques.
-Mais combinez plusieurs titres, ne réduit pas tous les risques. Il ne réduit que le risque non-systématique, risque que est propre à l&rsquo;entreprise elle-même.
-CAPM (Capital Asset Pricing Model) décrit la relation entre le risque systématique et le rendement attendu des actifs. Si l&rsquo;on veut réduire le risque, il faut prendre en compte le risque de marché (inflation, guerre, récession&hellip;). La variation des prix des actions a une relation avec le marché.
+Mais combinez plusieurs titres, ne réduit pas totalement les risques. Il ne réduit que le risque non-systématique, risque lié à l&rsquo;entreprise elle-même.
+CAPM (Capital Asset Pricing Model) décrit la relation entre le risque systématique et le rendement attendu des actifs. Si l&rsquo;on veut réduire le risque, il faut prendre en compte la volatilité de l&rsquo;actif et sa correlation avec le marché, le risque de marché (inflation, guerre, récession&hellip;). La variation des prix des actions a une relation avec le marché. Le risque Systematique dans un marché peut etre geré en utilisant la strategie de la neutralité, qui consiste a prendre des positions d&rsquo;achat et de vente de maniere simultanée dans un portfeuille; cette strategie aura une correlation de 0.
 Les produits dérivés, tell que les options, futures, les swaps etc., peuvent être utilisés pour réduire ou éliminer tous les risques, avec une bonne stratégie.</p>
-<p><a href="https://github.com/antonio2505/Portfolio-Optimization/blob/main/modern_portfolio.py">Lien vers le référentiel GitHub</a></p>
 <h3 id="_note_-le-prochain-projet-portera-sur-la-var-et-la-cvar-lune-des-mesures-les-plus-importantes-pour-determiner-les-risk-du-marché-lavantage-de-lutilisation-dun-algorithmique-permet-au-trader-ou-au-financier-detre-plus-efficace-dans-les-taches-et-il-peut-meme-analyser-plus-1000-stocks-en-quelques-fraction-de-seconde"><em>Note</em>: Le Prochain projet portera sur la VaR et la CVaR, l&rsquo;une des mesures les plus importantes pour determiner les risk du marché. L&rsquo;avantage de l&rsquo;utilisation d&rsquo;un algorithmique permet au trader ou au financier d&rsquo;etre plus efficace dans les taches et il peut meme analyser plus 1000 stocks en quelques fraction de seconde.</h3>
+<p><a href="https://github.com/antonio2505/Portfolio-Optimization/blob/main/modern_portfolio.py">Lien vers le référentiel GitHub</a></p>
 <ul class="pa0">
   
    <li class="list di">

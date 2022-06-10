@@ -7,7 +7,7 @@
     <title>Projet 5: Options Trading Strategies with Python | Antoine Kassi</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee">
-    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Hugo 0.68.3" />
     
     
     
@@ -32,14 +32,17 @@
     <meta property="og:title" content="Projet 5: Options Trading Strategies with Python" />
 <meta property="og:description" content="Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://antonio2505.github.io/antoine_kassi/post/projet-5/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://antonio2505.github.io/antoine_kassi/post/projet-5/" />
 <meta property="article:published_time" content="2022-05-25T10:58:08-04:00" />
 <meta property="article:modified_time" content="2022-05-25T10:58:08-04:00" /><meta property="og:site_name" content="Antoine Kassi" />
-
 <meta itemprop="name" content="Projet 5: Options Trading Strategies with Python">
-<meta itemprop="description" content="Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee"><meta itemprop="datePublished" content="2022-05-25T10:58:08-04:00" />
+<meta itemprop="description" content="Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee">
+<meta itemprop="datePublished" content="2022-05-25T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2022-05-25T10:58:08-04:00" />
 <meta itemprop="wordCount" content="1797">
+
+
+
 <meta itemprop="keywords" content="scene," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Projet 5: Options Trading Strategies with Python"/>
 <meta name="twitter:description" content="Bull Call Spread, Bear Call Spread, Bull Put Spread, Bear Put Spread, Straddle Strategy, Butterfly Strategy, Strangle Strategy et une Strategie presonnalisee"/>
@@ -200,7 +203,7 @@ Par example:</p>
 <p>l&rsquo;action ABC est negocié a $50. L&rsquo;achat de 100 actions d&rsquo;ABC coutera $5000. nous risquons de perdre tout notre Investment.</p>
 </li>
 <li>
-<p>Achat Option Call d&rsquo;ABC, avec un strike $50 cout $6/action. un contrat contient 100 actions, soit nos depenses totals est $6*100 soit $600 (on depense seulement que $600 au lieu de $5000)et qui represent notre perte maximal si l&rsquo;action revient a chuter jusqu&rsquo;a zero.</p>
+<p>Achat Option Call d&rsquo;ABC, avec un strike $50 cout $6/action. un contrat contient 100 actions, soit nos depenses sont de $6*100 soit $600 (on depense seulement que $600 au lieu de $5000)et qui represent notre perte maximal si l&rsquo;action revient a chuter jusqu&rsquo;a zero.</p>
 </li>
 </ul>
 <p>ces strategies peuvent etre utilisee dans une situation de trading automatisee ou algoritmique pour suprimer l&rsquo;emotion dans les  decisions de trading.</p>
@@ -224,11 +227,13 @@ Option1 C1 : Cette option a un prix d&rsquo;exercice(strike) de 130 $ et se vend
 <p>Option 2 C2 : Cette option a un prix d&rsquo;exercice(strike) de 90 $ et se vend actuellement à 20 $</p>
 <p>Profit Maximum : (K1 - K2) - (C2 - C1) = (130-90)-(20-5) = $25
 Perte Maximum : C1 - C2 = 5 - 20 = -$15</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/1.1.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/1.1.png"/> 
 </figure>
 
-<p>Le diagramme ci-dessous montre que pour des cours boursiers futurs plus élevés à la date d&rsquo;expiration, la position affiche un profit jusqu&rsquo;à un maximum de 25 $ et pour des cours inférieurs, la position perd de l&rsquo;argent jusqu&rsquo;à une perte maximale de 15 $.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/1.png"/>
+<p>Le diagramme ci-dessous montre que pour des cours boursiers futurs plus élevés à la date d&rsquo;expiration, la position affiche un profit jusqu'à un maximum de 25 $ et pour des cours inférieurs, la position perd de l&rsquo;argent jusqu'à une perte maximale de 15 $.</p>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/1.png"/> 
 </figure>
 
 <h3 id="2-bear-call-spread">2. Bear Call Spread</h3>
@@ -249,11 +254,13 @@ Option1 : Cette option a un prix d&rsquo;exercice(strike) de $30 et se vend actu
 <p>Option 2 : Cette option a un prix d&rsquo;exercice(strike) de $35 et se vend actuellement à $0.5</p>
 <p>Profit Maximum : C1 - C2 = 2.5 - 0.5 = -$2.00
 Perte Maximum : (K1 - K2) + (C2 - C1) = (30-35)+(2.50-0.5) = -$3.00</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/2.2.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/2.2.png"/> 
 </figure>
 
 <p>La section verte est limitée à un profit maximum de $2 et la section rouge est limitée à une perte maximale de $3.00 comme nous l&rsquo;avons vu ci-dessus.
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/2.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/2.png"/> 
 </figure>
 </p>
 <h3 id="3-bull-put-spread">3. Bull Put Spread</h3>
@@ -264,11 +271,13 @@ Option1 : Cette option a un prix d&rsquo;exercice(strike) de $110 et se vend act
 <p>Profit Maximum : C1 - C2 = 15 - 4 = -$11
 Perte Maximum : -(K1 - K2) + (C1 - C2) = (110-90)-(15-4) = -$9
 C1 &gt; C2</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/3.3.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/3.3.png"/> 
 </figure>
 
-<p>Comme nous le voyons sur le diagramme ci-dessous, la stratégie rapporte un profit jusqu&rsquo;à un maximum de $11 a la hausse de l&rsquo;action et limite vos pertes à un maximum de $9.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/3.png"/>
+<p>Comme nous le voyons sur le diagramme ci-dessous, la stratégie rapporte un profit jusqu'à un maximum de $11 a la hausse de l&rsquo;action et limite vos pertes à un maximum de $9.</p>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/3.png"/> 
 </figure>
 
 <h3 id="4-bear-put-spread">4. Bear Put Spread</h3>
@@ -277,20 +286,24 @@ C1 &gt; C2</p>
 <p>Option 2 : Cette option a un prix d&rsquo;exercice(strike) de $80 et se vend actuellement à $1</p>
 <p>Profit Maximum : (K1 - K2) - (C1 - C2) = (90-80)-(3-1) = $8
 Perte Maximum : -(C1 - C2) = -(3 - 1) = -$2</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/4.4.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/4.4.png"/> 
 </figure>
 
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/4.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/4.png"/> 
 </figure>
 
 <h3 id="5-straddle-strategy">5. Straddle Strategy</h3>
 <p>straddle est une stratégie dans laquelle un trader achète à la fois une option Call et une option Put au même prix d&rsquo;exercice. L&rsquo;idée ici est que le trader bénéficiera d&rsquo;un mouvement important du prix de l&rsquo;action sous-jacente, quelle que soit la direction du mouvement. Il s&rsquo;agit d&rsquo;une stratégie particulièrement utile lorsqu&rsquo;un trader prédit une forte augmentation de la volatilite du prix d&rsquo;un actif, mais qu&rsquo;il n&rsquo;est pas sûr de la direction du mouvement. Nous pouvons acheter à la fois un put et un call.</p>
 <p>Puisque nous achetons une option Call, le profit potentiel de l&rsquo;entrée dans cette stratégie est potentiellement illimité, cependant, puisque nous achetons également une option Put, le coût d&rsquo;entrée dans une stratégie comme celle-ci est plus élevé que le simple achat de l&rsquo;une ou l&rsquo;autre.</p>
 <p>Prenons un exemple, Supposons que les bénéfices des sociétés ABC sortent la semaine prochaine, vous observez une option Call et une option Put sur le marché se vendant 5 $ chacun à un prix d&rsquo;exercice de 100 $ et l&rsquo;action se négocie actuellement à 100 $ également.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/5.5.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/5.5.png"/> 
 </figure>
 
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/5.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/5.png"/> 
 </figure>
 
 <h3 id="6-butterfly-strategy">6. Butterfly Strategy</h3>
@@ -300,18 +313,22 @@ Une action se vend actuellement à $100 et un trader qui souhaite prendre positi
 <p>Option 1 : ACHETEZ une option Call avec un prix d&rsquo;exercice de $94 pour $8</p>
 <p>Option 2 : ACHETEZ une option Call avec un prix d&rsquo;exercice de $106 pour $2</p>
 <p>Option 3 : VENDRE DEUX options d&rsquo;achat avec un prix d&rsquo;exercice de $100 pour $4 chacune pour un total de $8.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/6.6.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/6.6.png"/> 
 </figure>
 
 <p>Remarquez sur le graphique ci-dessous que le profit maximum est réalisé si le cours de l&rsquo;action à l&rsquo;expiration est égal au prix d&rsquo;exercice des deux Call que nous avons vendu lors de l&rsquo;entrée dans la position. Cela peut être une meilleure option que le short straddle si nous voulions considérer que le prix de l&rsquo;action sera autour de son niveau actuel, car la baisse est limitée.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/6.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/6.png"/> 
 </figure>
 
-<p>Bien sûr, nous pouvons également prendre une position de vente Butterfly. Cette position peut être prise si nous voulions considérer que le titre est susceptible de s&rsquo;éloigner de son niveau actuel, mais nous voulons également réduire la baisse.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/7.7.png"/>
+<p>Bien sûr, nous pouvons également prendre une position de vente Butterfly. Cette position peut être prise si nous voulions considérer que le titre est susceptible de s'éloigner de son niveau actuel, mais nous voulons également réduire la baisse.</p>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/7.7.png"/> 
 </figure>
 
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/7.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/7.png"/> 
 </figure>
 
 <h3 id="7-strangle-strategy">7. Strangle Strategy</h3>
@@ -321,18 +338,22 @@ Une action se vend actuellement à $100 et un trader qui souhaite prendre positi
 <p>Option 1 : Une option d&rsquo;achat à $4 avec un prix d&rsquo;exercice à $130</p>
 <p>Option 2 : Une option de vente à $5 avec un prix d&rsquo;exercice à $70</p>
 <p>Pour entrer dans un Strangle, vous achèteriez ces deux options. Pour que cette stratégie rapporte de l&rsquo;argent, le stock doit être inférieur à $61 (70-9) ou supérieur à $139 (130+9). Cela est dû au fait que le coût d&rsquo;entrée dans la stratégie est de 9 $ et que pour gagner de l&rsquo;argent, nous devons être au-dessus / en dessous de l&rsquo;un ou l&rsquo;autre des strikes à l&rsquo;expiration plus le coût d&rsquo;entrée.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/8.8.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/8.8.png"/> 
 </figure>
 
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/8.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/8.png"/> 
 </figure>
 
 <h3 id="8-strategie-presonnalisée">8. Strategie presonnalisée</h3>
 <p>Bien sûr, les traders ne sont pas limités à ces stratégies définies et ils peuvent créer les leurs pour cibler différentes fourchettes de prix des actions à l&rsquo;expiration. Ci-dessous, nous donnons un exemple d&rsquo;achat et de vente d&rsquo;options Call et Put et montrons le diagramme de gain.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/9.9.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/9.9.png"/> 
 </figure>
 
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/9.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/optioimage/9.png"/> 
 </figure>
 
 <p>vous pouvez essayer d&rsquo;ajouter différentes positions et voir le diagramme résultant.

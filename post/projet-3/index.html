@@ -7,7 +7,7 @@
     <title>Projet 3: Couverture de portefeuille algorithmique (Hedging) | Antoine Kassi</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Utilisation des Greeks pour couvrir les risks de notre portefeuille">
-    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Hugo 0.68.3" />
     
     
     
@@ -32,14 +32,17 @@
     <meta property="og:title" content="Projet 3: Couverture de portefeuille algorithmique (Hedging)" />
 <meta property="og:description" content="Utilisation des Greeks pour couvrir les risks de notre portefeuille" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://antonio2505.github.io/antoine_kassi/post/projet-3/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://antonio2505.github.io/antoine_kassi/post/projet-3/" />
 <meta property="article:published_time" content="2022-04-24T10:58:08-04:00" />
 <meta property="article:modified_time" content="2022-04-24T10:58:08-04:00" /><meta property="og:site_name" content="Antoine Kassi" />
-
 <meta itemprop="name" content="Projet 3: Couverture de portefeuille algorithmique (Hedging)">
-<meta itemprop="description" content="Utilisation des Greeks pour couvrir les risks de notre portefeuille"><meta itemprop="datePublished" content="2022-04-24T10:58:08-04:00" />
+<meta itemprop="description" content="Utilisation des Greeks pour couvrir les risks de notre portefeuille">
+<meta itemprop="datePublished" content="2022-04-24T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2022-04-24T10:58:08-04:00" />
 <meta itemprop="wordCount" content="2345">
+
+
+
 <meta itemprop="keywords" content="scene," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Projet 3: Couverture de portefeuille algorithmique (Hedging)"/>
 <meta name="twitter:description" content="Utilisation des Greeks pour couvrir les risks de notre portefeuille"/>
@@ -182,7 +185,8 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/Trader_Markets.jpg"/>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/Trader_Markets.jpg"/> 
 </figure>
 
 <h2 id="quest-ce-que-la-couverture-de-portefeuille-">Qu&rsquo;est-ce que la couverture de portefeuille ?</h2>
@@ -193,61 +197,67 @@ il existe de nombreuses façons de couvrir les actions, par example utiliser des
 <h2 id="quelles-sont-les-stratégies-de-couverture-les-plus-efficaces-pour-réduire-le-risque-de-marché-">Quelles sont les stratégies de couverture les plus efficaces pour réduire le risque de marché ?</h2>
 <p>Il existe un certain nombre de stratégies de couverture efficaces pour réduire le risque de marché, selon l&rsquo;actif ou le portefeuille d&rsquo;actifs couverts. Les trois les plus populaires sont la construction de portefeuille, les options et les indicateurs de volatilité.</p>
 <h3 id="quest-une-option-">Qu&rsquo;est une Option ?</h3>
-<p>Un contrat d&rsquo;option est un accord qui donne à l&rsquo;acheteur le droit, mais pas l&rsquo;obligation, d&rsquo;acheter ou de vendre un actif à un prix déterminé. Dans certains cas, une option peut être exécutée à tout moment avant la date d&rsquo;expiration(Options American), et dans d&rsquo;autres, elle ne peut être exécutée qu&rsquo;à la date d&rsquo;expiration(Option Europeen).</p>
-<p>C&rsquo;est quoi l&rsquo;indicateurs de volatilité ?
-L&rsquo;indicateur de volatilité est un outil technique qui mesure à quel point un titre s&rsquo;éloigne de son prix moyen, supérieur et inférieur.</p>
+<p>Un contrat d&rsquo;option est un accord qui donne à l&rsquo;acheteur le droit, mais pas l&rsquo;obligation, d&rsquo;acheter ou de vendre un actif à un prix déterminé. Dans certains cas, une option peut être exercée à tout moment avant la date d&rsquo;expiration(Options American), et dans d&rsquo;autres cas, elle ne peut être exécutée qu'à la date d&rsquo;expiration(Option Europeen).</p>
+<p>C&rsquo;est quoi l&rsquo;indicateurs de volatilité ?</p>
+<pre><code>L'indicateur de volatilité est un outil technique qui mesure à quel point un titre s'éloigne de son prix moyen, supérieur et inférieur.
+</code></pre>
 <p>exemple: Bollinger Bands, Average True Range (ATR)&hellip;</p>
 <h2 id="théorie-moderne-du-portefeuille-modern-portfolio-theory">Théorie moderne du portefeuille (Modern Portfolio Theory)</h2>
-<p>L&rsquo;un des principaux outils est la théorie moderne du portefeuille (MPT), qui utilise la diversification pour créer des groupes d&rsquo;actifs qui réduisent la volatilité. MPT utilise des mesures statistiques pour déterminer une frontière efficiente pour un montant de rendement attendu pour un risque défini. La théorie examine la corrélation entre différents actifs, ainsi que la volatilité des actifs, pour créer un portefeuille optimal.</p>
+<p>L&rsquo;un des principaux outils est la théorie moderne du portefeuille (MPT), qui utilise la diversification pour créer des groupes d&rsquo;actifs qui réduisent la volatilité. MPT utilise des mesures statistiques pour déterminer une frontière efficiente pour un montant de rendement attendu pour un risque définis. La théorie examine la corrélation entre différents actifs, ainsi que la volatilité des actifs, pour créer un portefeuille optimal.</p>
 <h2 id="indicateur-dindice-de-volatilité">Indicateur d&rsquo;indice de volatilité</h2>
 <p>Les investisseurs peuvent également se couvrir en utilisant <a href="https://www.investopedia.com/articles/exchangetradedfunds/11/profit-from-vix.asp">l&rsquo;indicateur de l&rsquo;indice de volatilité (VIX)</a>. Le VIX(Volatility Index Indicator) mesure la volatilité implicite <a href="https://www.investopedia.com/terms/a/atthemoney.asp">at the money calls and puts</a> sur l&rsquo;indice S&amp;P 500. Le VIX augmente pendant les périodes de volatilité accrue. Généralement, un niveau inférieur à 20 indique une faible volatilité, tandis qu&rsquo;un niveau de 30 est très volatil. Il existe des fonds négociés en bourse <a href="https://www.investopedia.com/terms/e/etf.asp">(ETF)</a> qui suivent le VIX. Les investisseurs peuvent utiliser des actions ou des options d&rsquo;ETF pour prendre une position longue sur le VIX en tant que couverture spécifique à la volatilité.</p>
 <p>Bien sûr, bien que ces outils soient certainement puissants, ils ne peuvent pas réduire tous les risques de marché.</p>
 <h2 id="options">Options</h2>
 <p>Les options sont un autre outil puissant. Les investisseurs qui cherchent à couvrir une action individuelle avec une liquidité raisonnable peuvent souvent acheter des options de vente pour se protéger contre le risque d&rsquo;un mouvement baissier. Les puts prennent de la valeur à mesure que le prix du titre sous-jacent baisse. Le principal inconvénient de cette approche est le montant de la prime pour acheter les options de vente<a href="https://www.investopedia.com/terms/o/option-premium.asp">(premium)</a>. Les options achetées sont sujettes à une dégradation dans le temps et perdent de la valeur à mesure qu&rsquo;elles approchent de l&rsquo;expiration. Les écarts de vente verticaux <a href="https://www.investopedia.com/terms/v/verticalspread.asp">(Vertical put spreads)</a> peuvent réduire les montants de prime dépensés.</p>
-<p>Actions ont une exposition très directe au risque specifique et systématique. Les options, en revanche, sont exposées non seulement à l&rsquo;actif sous-jacent, mais également aux taux d&rsquo;intérêt, au temps et à la volatilité. Ces expositions sont des données d&rsquo;entrée(ou des inputs) du modèle d&rsquo;évaluation des options <a href="https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model">Black-Scholes</a>. Étant donné que ces entrées affectent la valeur de l&rsquo;option en question, la dérivée partielle de la fonction peut nous dire comment la valeur de l&rsquo;option change lorsque l&rsquo;une de ces expositions change en maintenant, les autres constantes.</p>
+<p>Les Actifs ont une exposition très directe au risque specifique et systématique. Les options, en revanche, sont exposées non seulement à l&rsquo;actif sous-jacent, mais également aux taux d&rsquo;intérêt, au temps et à la volatilité. Ces expositions sont des données d&rsquo;entrée(ou des inputs) du modèle d'évaluation des options <a href="https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model">Black-Scholes</a>. Étant donné que ces entrées affectent la valeur de l&rsquo;option en question, la dérivée partielle de la fonction peut nous dire comment la valeur de l&rsquo;option change lorsque l&rsquo;une de ces expositions change en maintenant, les autres constantes.</p>
 <p><em>La formule du model de Black-Scholes</em>:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/black-scholes.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/black-scholes.png"/> 
 </figure>
 </p>
-<p>Ici, nous nous concentrerons sur la stratégie d&rsquo;options pour couvrir notre portefeuille. Discutons d&rsquo;abord de toutes les dérivées partielles de ce modèle d&rsquo;évaluation des options, puis codez un système de couverture algorithmique en utilisant Python.</p>
+<p>Ici, nous nous concentrerons sur la stratégie d&rsquo;options pour couvrir notre portefeuille. Discutons d&rsquo;abord de toutes les dérivées partielles de ce modèle d'évaluation des options, puis codez un système de couverture algorithmique en utilisant Python.</p>
 <h2 id="les-greeks">Les Greeks</h2>
 <h3 id="que-sont-les-greeks-">Que sont les Greeks ?</h3>
 <p>Les variables utilisées pour évaluer le risque sur le marché des options sont communément appelées « les Greeks ». Un symbole Greeks est utilisé pour désigner chacun de ces risques. Les traders utilisent différentes valeurs Greeks, telles que delta, thêta et autres, pour évaluer le risque des options et gérer les portefeuilles d&rsquo;options.
 Chacun de ces Greeks est associé à une valeur, et cette valeur indique aux traders comment l&rsquo;option se déplace ou le risque associé à cette option. Le nombre ou la valeur associée à un Greeks change avec le temps. Par conséquent, les traders d&rsquo;options sophistiqués peuvent calculer ces valeurs quotidiennement pour évaluer tout changement susceptible d&rsquo;affecter leurs positions ou leurs perspectives, ou simplement pour vérifier si leur portefeuille doit être rééquilibré. Vous trouverez ci-dessous quelques-uns des principaux Greeks.</p>
 <h3 id="delta">Delta</h3>
-<p>La dérivée partielle du premier ordre par rapport à l&rsquo;actif sous-jacent de l&rsquo;équation de <a href="https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model">Black-Scholes</a> est appelée Delta. Delta (Δ) représente le taux de variation entre le prix de l&rsquo;option et une variation de $1 du prix de l&rsquo;actif sous-jacent. Le delta d&rsquo;une option d&rsquo;achat(call) est compris entre 0 et 1, tandis que le delta d&rsquo;une option de vente(put) est compris entre 0 et -1.
+<p>La dérivée partielle du premier ordre par rapport à l&rsquo;actif sous-jacent de l'équation de <a href="https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model">Black-Scholes</a> est appelée Delta. Delta (Δ) représente le taux de variation entre le prix de l&rsquo;option et une variation de $1 du prix de l&rsquo;actif sous-jacent. Le delta d&rsquo;une option d&rsquo;achat(call) est compris entre 0 et 1, tandis que le delta d&rsquo;une option de vente(put) est compris entre 0 et -1.
 Par exemple, supposons qu&rsquo;un investisseur est sur une option d&rsquo;achat(call) avec un delta de 0,20. Par conséquent, si l&rsquo;action sous-jacente augmente de $1, le prix de l&rsquo;option augmentera théoriquement de 20 cents.
 Pour les traders d&rsquo;options, le delta représente également le ratio de couverture <a href="https://www.investopedia.com/terms/h/hedgeratio.asp">(hedge ratio)</a> pour créer une position delta neutre <a href="https://www.investopedia.com/terms/d/deltaneutral.asp">(Delta Neutral, est une stratégie utilisant plusieurs positions avec des deltas positifs et négatifs équilibrés de sorte que le delta global des actifs en question soit zéro)</a>. Par exemple, si vous achetez une option d&rsquo;achat(American call) avec un delta de 0,40, vous devrez vendre 40 actions pour être entièrement couvert. Le delta net pour un portefeuille d&rsquo;options peut également être utilisé pour obtenir le ratio de couverture du portefeuille. Par exemple, une option d&rsquo;achat delta de 0,40 a aujourd&rsquo;hui une probabilité implicite de 40 % de finir <a href="https://www.investopedia.com/terms/i/inthemoney.asp">in-the-money(ITM)</a>, en positif.</p>
 <p>Formule:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/delta_formula.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/delta_formula.png"/> 
 </figure>
 </p>
 <h3 id="theta">Theta</h3>
-<p>La dérivée partielle du premier ordre par rapport au temps jusqu&rsquo;à l&rsquo;expiration de l&rsquo;option de l&rsquo;équation de Black-Scholes est connue sous le nom de thêta. Theta (Θ) représente le taux de variation entre le prix de l&rsquo;option et le temps. Thêta indique le montant que le prix d&rsquo;une option diminuerait à mesure que le temps jusqu&rsquo;à l&rsquo;expiration diminue. Par exemple, supposons qu&rsquo;un investisseur est sur un achat d&rsquo;une option avec un thêta de -0,50. Le prix de l&rsquo;option diminuerait de 50 cents chaque jour qui passe. Le thêta augmente lorsque les options sont à <a href="https://www.investopedia.com/terms/a/atthemoney.asp">at-the-money</a>,une situation où le prix d&rsquo;exercice(strike price) d&rsquo;une option est identique au prix actuel du marché du titre sous-jacent. et diminue lorsque les options sont a in-the-money ou at-the-money. Les options d&rsquo;achats de call et de put auront généralement un thêta négatif ; Les options de vente de call et de put auront un thêta positif.</p>
+<p>La dérivée partielle du premier ordre par rapport au temps jusqu'à l&rsquo;expiration de l&rsquo;option de l'équation de Black-Scholes est connue sous le nom de thêta. Theta (Θ) représente le taux de variation entre le prix de l&rsquo;option et le temps. Thêta indique le montant que le prix d&rsquo;une option diminuerait à mesure que le temps jusqu'à l&rsquo;expiration diminue. Par exemple, supposons qu&rsquo;un investisseur est sur un achat d&rsquo;une option avec un thêta de -0,50. Le prix de l&rsquo;option diminuerait de 50 cents chaque jour qui passe. Le thêta augmente lorsque les options sont à <a href="https://www.investopedia.com/terms/a/atthemoney.asp">at-the-money</a>,une situation où le prix d&rsquo;exercice(strike price) d&rsquo;une option est identique au prix actuel du marché du titre sous-jacent. et diminue lorsque les options sont a in-the-money ou at-the-money. Les options d&rsquo;achats de call et de put auront généralement un thêta négatif ; Les options de vente de call et de put auront un thêta positif.</p>
 <p>Formile:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/theta_formula.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/theta_formula.png"/> 
 </figure>
 </p>
 <h3 id="gamma">Gamma</h3>
-<p>La dérivée partielle de second ordre par rapport à l&rsquo;actif sous-jacent de l&rsquo;équation de Black-Scholes est connue sous le nom de gamma. Gamma (Γ) représente le taux de variation entre le delta d&rsquo;une option et le prix de l&rsquo;actif sous-jacent.
+<p>La dérivée partielle de second ordre par rapport à l&rsquo;actif sous-jacent de l'équation de Black-Scholes est connue sous le nom de gamma. Gamma (Γ) représente le taux de variation entre le delta d&rsquo;une option et le prix de l&rsquo;actif sous-jacent.
 Gamma indique le montant que le delta changerait en cas de mouvement de $1 du titre sous-jacent. Par exemple, supposons qu&rsquo;un investisseur est sur une option d&rsquo;achat (call) sur l&rsquo;action XYZ. L&rsquo;option d&rsquo;achat(call) a un delta de 0,50 et un gamma de 0,10. Par conséquent, si l&rsquo;action XYZ augmente ou diminue de $1, le delta de l&rsquo;option d&rsquo;achat(call) augmentera ou diminuera de 0,10.</p>
 <p>Formule:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/gamma_formula.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/gamma_formula.png"/> 
 </figure>
 </p>
 <h3 id="vega">Vega</h3>
-<p>La dérivée partielle de premier ordre par rapport à la volatilité des actifs sous-jacents de l&rsquo;équation de Black-Scholes est connue sous le nom de vega. Vega (ν) représente le taux de variation entre la valeur d&rsquo;une option et la <a href="link:">volatilité implicite</a> de l&rsquo;actif sous-jacent. Vega indique le montant des changements de prix d&rsquo;une option compte tenu d&rsquo;un changement de 1% de la volatilité implicite. Par exemple, une option avec un vega de 0,10 indique que la valeur de l&rsquo;option devrait changer de 10 cents si la volatilité implicite change de 1 %.</p>
+<p>La dérivée partielle de premier ordre par rapport à la volatilité des actifs sous-jacents de l'équation de Black-Scholes est connue sous le nom de vega. Vega (ν) représente le taux de variation entre la valeur d&rsquo;une option et la <a href="link:">volatilité implicite</a> de l&rsquo;actif sous-jacent. Vega indique le montant des changements de prix d&rsquo;une option compte tenu d&rsquo;un changement de 1% de la volatilité implicite. Par exemple, une option avec un vega de 0,10 indique que la valeur de l&rsquo;option devrait changer de 10 cents si la volatilité implicite change de 1 %.</p>
 <p>Formule:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/vega_formula.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/vega_formula.png"/> 
 </figure>
 </p>
 <h3 id="rho">Rho</h3>
-<p>La dérivée partielle de premier ordre par rapport au taux sans risque de l&rsquo;équation de Black-Scholes est appelée rho. Rho (ρ) représente le taux de variation entre la valeur d&rsquo;une option et une variation de 1 % du taux d&rsquo;intérêt. Par exemple, supposons qu&rsquo;une option d&rsquo;achat ait un rho de 0,05 et un prix de $1,25. Si les taux d&rsquo;intérêt augmentent de 1 %, la valeur de l&rsquo;option d&rsquo;achat passerait à $1,30.</p>
+<p>La dérivée partielle de premier ordre par rapport au taux sans risque de l'équation de Black-Scholes est appelée rho. Rho (ρ) représente le taux de variation entre la valeur d&rsquo;une option et une variation de 1 % du taux d&rsquo;intérêt. Par exemple, supposons qu&rsquo;une option d&rsquo;achat ait un rho de 0,05 et un prix de $1,25. Si les taux d&rsquo;intérêt augmentent de 1 %, la valeur de l&rsquo;option d&rsquo;achat passerait à $1,30.</p>
 <p>Formule:</p>
 <h2 id="dynamic-hedging">Dynamic Hedging</h2>
 <p>Dynamic Hedging est une stratégie qui consiste à rééquilibrer les positions de couverture à mesure que les conditions du marché changent.</p>
 <p>Considérez le cas suivant :</p>
-<p>Un collègue a actuellement une position courte(vente) sur 1000 NVDA call option, il veut couvrir sa position aux changements de volatilité, aux mouvements de l&rsquo;actif sous-jacent. Vous êtes sur dans la de gestion des risques et proposez de construire une couverture dynamique à rééquilibrer quotidiennement. Comment neutraliser son exposition au vega, delta et gamma de l&rsquo;option ?</p>
+<p>Un collègue a actuellement une position courte(vente) sur 1000 NVDA call option, il veut couvrir sa position aux changements de volatilité, aux mouvements de l&rsquo;actif sous-jacent. Vous êtes dans la gestion des risques et proposez de construire une couverture dynamique à rééquilibrer quotidiennement. Comment neutraliser son exposition au vega, delta et gamma de l&rsquo;option ?</p>
 <p>La première chose à réaliser est que pour neutraliser l&rsquo;exposition aux greeks, nous allons avoir besoin de positions compensatoires sur d&rsquo;autres options. Il y a trois greeks à neutraliser, nous avons donc besoin de trois options pour créer trois équations de greeks et le pourcentage d&rsquo;allocation de ces trois inconnues. Cependant, l&rsquo;astuce ici consiste à réaliser que la dérivée partielle de l&rsquo;actif sous-jacent par rapport à lui-même n&rsquo;est que de 1, cela signifie que l&rsquo;actif sous-jacent a un delta de 1 et que toutes les autres valeurs greeks sont de 0. Cela signifie que nous pouvons construire un portefeuille de deux options négociables, trouver les pourcentages d&rsquo;allocation optimal pour neutraliser les greeks, puis prendre une position compensatoire dans l&rsquo;actif sous-jacent.</p>
 <p><em>Python pour la couverture dynamique(Dynamic Hedging)</em></p>
 <p>Considérez le code suivant qui modélise les options Calls et Put européens.
@@ -260,10 +270,12 @@ NVDA <a href="https://www.investopedia.com/terms/i/iv.asp">implied volatility</a
 30 day <a href="https://www.investopedia.com/terms/l/libor.asp">LIBOR</a> rate 1.5%</p>
 <p>En utilisant ces données, nous pouvons trouver la valeur théorique de la position d&rsquo;option de notre collègue.
 images:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/1.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/1.png"/> 
 </figure>
 </p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/2.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/2.png"/> 
 </figure>
 
 <p>Cela signifie que notre collègue aurait perçu une prime de $32 264(prix de l&rsquo;option vente call) pour la vente des options.</p>
@@ -271,11 +283,13 @@ images:
 <p>Une prime d&rsquo;option est le prix actuel du marché d&rsquo;un contrat d&rsquo;option. Il s&rsquo;agit donc du revenu perçu par le vendeur (émetteur) d&rsquo;un contrat d&rsquo;option à une autre partie.</p>
 <p>Et les Greeks ? Pour trouver la position de notre collègue dans les Greeks, nous pouvons simplement les determiner et multiplier par la position(par 1000)</p>
 <p>images code:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/3.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/3.png"/> 
 </figure>
 </p>
 <p>resultat:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/4.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/4.png"/> 
 </figure>
 </p>
 <p>pourquoi (-) devant ? parce que nous soumme en position de vente(call)</p>
@@ -285,19 +299,23 @@ Gamma: -6.35
 Vega: -815.54</p>
 <p>Considérons maintenant deux autres options d&rsquo;achat négociables, tous les autres paramètres sont les mêmes mais les deux prix d&rsquo;exercice(strike price) sont 550 et 555&hellip;</p>
 <p>strike=550
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/5.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/5.png"/> 
 </figure>
 </p>
 <p>resultat
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/6.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/6.png"/> 
 </figure>
 </p>
 <p>strike=555
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/7.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/7.png"/> 
 </figure>
 </p>
 <p>resultat:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/8.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/8.png"/> 
 </figure>
 </p>
 <p>Call Option A:</p>
@@ -323,38 +341,46 @@ Ce montant d&rsquo;allocation(W) nous permettra de determiner quel montant il at
 <p>Nous pouvons le faire en utilisant Python…
 Remarque : Bien que nous ayons une position de vente dans l&rsquo;option d&rsquo;origine, nous multiplions par un 1000 positif car nous voulons inverser la matrice vers une position positive(achat) de gamma, vega:</p>
 <p>[W1, W2] = [0.00605 0.00577, 0.77823 0.74127]^(-1)*[6.35, 815.54]</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/9.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/9.png"/> 
 </figure>
 
 <p>result:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/10.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/10.png"/> 
 </figure>
 </p>
 <p>Nous avons effectivement trouvé l&rsquo;inverse de la matrice, le produit scalaire sera les montants d&rsquo;allocation résultants pour les deux options négociables (A et B)…</p>
 <p>code:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/11.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/11.png"/> 
 </figure>
 </p>
 <p>result:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/12.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/12.png"/> 
 </figure>
 </p>
 <p>En utilisant ces montants d&rsquo;allocation, nous aurons neutralisé efficacement l&rsquo;exposition aux gamma et vega…</p>
 <p>code:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/13.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/13.png"/> 
 </figure>
 </p>
 <p>result:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/14.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/14.png"/> 
 </figure>
 </p>
 <p>Maintenant que l&rsquo;exposition au gamma et au vega est neutralisée, nous devons neutraliser notre nouvelle exposition au delta. Pour trouver notre nouvelle exposition, nous prenons la somme du produit de toutes les positions d&rsquo;options de notre portefeuille avec leurs deltas respectifs.</p>
 <p>code:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/15.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/15.png"/> 
 </figure>
 </p>
 <p>resultat:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/16.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/16.png"/> 
 </figure>
 </p>
 <p>Après avoir multiplié nos nouvelles positions d&rsquo;options par les greeks d&rsquo;origine, nous constatons que notre position delta nette est de -46. Cela signifie qu&rsquo;en achetant 46 actions de l&rsquo;actif sous-jacent (NVDA), nous aurons un portefeuille neutre delta, gamma et vega. Cela signifie que la valeur de notre portefeuille d&rsquo;options ne changera pas en cas de changement du prix de l&rsquo;actif sous-jacent, de la volatilité de l&rsquo;actif sous-jacent.</p>
@@ -364,11 +390,13 @@ Remarque : Bien que nous ayons une position de vente dans l&rsquo;option d&rsquo
 -8006 Call B Options (vente call)
 46 Shares of NVDA (action NVDA)</p>
 <p>Verification de la neutralité du portefeuille
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/17.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/17.png"/> 
 </figure>
 </p>
 <p>resultat:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/18.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/delta_hedging/18.png"/> 
 </figure>
 </p>
 <p>Il peut être implémenté directement dans un système de trading algorithmique.

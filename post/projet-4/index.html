@@ -7,7 +7,7 @@
     <title>Projet 4: Arbritrage Statistique | Antoine Kassi</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Arbritrage statistique par le Trading de Paire">
-    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Hugo 0.68.3" />
     
     
     
@@ -32,14 +32,17 @@
     <meta property="og:title" content="Projet 4: Arbritrage Statistique" />
 <meta property="og:description" content="Arbritrage statistique par le Trading de Paire" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://antonio2505.github.io/antoine_kassi/post/projet-4/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://antonio2505.github.io/antoine_kassi/post/projet-4/" />
 <meta property="article:published_time" content="2022-04-29T10:58:08-04:00" />
 <meta property="article:modified_time" content="2022-04-29T10:58:08-04:00" /><meta property="og:site_name" content="Antoine Kassi" />
-
 <meta itemprop="name" content="Projet 4: Arbritrage Statistique">
-<meta itemprop="description" content="Arbritrage statistique par le Trading de Paire"><meta itemprop="datePublished" content="2022-04-29T10:58:08-04:00" />
+<meta itemprop="description" content="Arbritrage statistique par le Trading de Paire">
+<meta itemprop="datePublished" content="2022-04-29T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2022-04-29T10:58:08-04:00" />
-<meta itemprop="wordCount" content="1525">
+<meta itemprop="wordCount" content="1523">
+
+
+
 <meta itemprop="keywords" content="scene," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Projet 4: Arbritrage Statistique"/>
 <meta name="twitter:description" content="Arbritrage statistique par le Trading de Paire"/>
@@ -182,15 +185,16 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/pair_trade.png"/>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/pair_trade.png"/> 
 </figure>
 
 <h1 id="pairs-trading-strategy">PAIRS TRADING STRATEGY</h1>
-<p>PAIRS TRADING est une stratégie de market-neutral trading  permettant aux traders de profiter pratiquement toutes les conditions du marché : tendance haussière, tendance baissière ou mouvement latéral. Cette stratégie est classée comme une stratégie d&rsquo;arbitrage statistique et de négociation de convergence(Hedging) <a href="https://en.wikipedia.org/wiki/Pairs_trade">wikipedia</a></p>
+<p>PAIRS TRADING est une stratégie de market-neutral trading  permettant aux traders de profiter pratiquement de toutes les conditions du marché : tendance haussière, tendance baissière ou mouvement latéral. Cette stratégie est classée comme une stratégie d&rsquo;arbitrage statistique et de négociation de convergence(Hedging) <a href="https://en.wikipedia.org/wiki/Pairs_trade">wikipedia</a></p>
 <ul>
 <li>Qu&rsquo;est ce que market-neutral trading strategy ?</li>
 </ul>
-<p>market-neutral trading strategy est un type de stratégie d&rsquo;investissement par un investisseur ou un gestionnaire d&rsquo;investissement qui cherche à profiter à la fois de la hausse et de la baisse des prix sur un ou plusieurs marchés tout en essayant d&rsquo;éviter complètement  prise la de risque de marché.</p>
+<p>market-neutral trading strategy est un type de stratégie d&rsquo;investissement par un investisseur ou un gestionnaire d&rsquo;investissement qui cherche à profiter à la fois de la hausse et de la baisse des prix sur un ou plusieurs marchés tout en essayant d'éviter complètement la prise de risque de marché.</p>
 <p>Le Trading de Paires est classée comme une stratégie d&rsquo;arbitrage statistique.</p>
 <ul>
 <li>Qu&rsquo;est ce que la stratégie d&rsquo;arbitrage statistique ?</li>
@@ -198,70 +202,82 @@
 <p>L&rsquo;arbitrage est une stratégie d&rsquo;investissement dans laquelle un investisseur achète et vend simultanément un actif sur différents marchés pour profiter d&rsquo;une différence de prix et générer un profit.</p>
 <h2 id="1--partie-i-implementation-de-la-strategy">1- PARTIE I: IMPLEMENTATION DE LA STRATEGY</h2>
 <h3 id="installation-des-libraries">Installation des libraries</h3>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/library.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/library.png"/> 
 </figure>
 
 <ol>
-<li>Selection des Stocks et  Identification de Pairs de stocks cointegrer.</li>
+<li>Selection des Stocks et  Identification de Pairs de stocks cointegré.</li>
 <li>Effectuer le test de stationariter pour la selection des pairs.</li>
 <li>Generer le Signal de Trading avec Z-Score test.</li>
-<li>Calcule de de Gain et perte de notre portefeuil</li>
+<li>Calcule de Gain et perte de notre portefeuil</li>
 </ol>
 <h3 id="1-selection-des-stocks-et-identification-de-pairs-de-stocks-cointegrer">1. Selection des Stocks et Identification de Pairs de stocks cointegrer.</h3>
-<p><figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/1.png"/>
+<p><figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/1.png"/> 
 </figure>
 
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/2.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/2.png"/> 
 </figure>
 </p>
 <h3 id="person-correlation">Person Correlation</h3>
-<p><figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/3.png"/>
+<p><figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/3.png"/> 
 </figure>
 
 resultat:</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/corr.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/corr.png"/> 
 </figure>
 
 <h3 id="person-correlation-1">Person Correlation</h3>
 <p>Le coefficient de corrélation de Pearson varie entre +1 et -1 et est une mesure de la relation entre deux variables. La valeur +1 indique une forte corrélation positive, zéro indique l&rsquo;absence de relation et -1 indique une forte relation négative. Nous pouvons voir dans la carte thermique ci-dessous qu&rsquo;il existe plusieurs paires avec une forte corrélation positive.</p>
 <h3 id="cointegration-des-paires">Cointegration des paires</h3>
 <p>Qu&rsquo;est ce que la cointegration ?</p>
-<p>La Cointegration est une methode statistique utilisee pour tester la Correlation entre deux ou plusieurs series temporaires dans un longue durée ou pour un temps specifique.
-deux series peuvent d&rsquo;etre correlees mais pas cointegrees, vise versa.
+<p>La Cointegration est une methode statistique utilisee pour tester la Correlation entre deux ou plusieurs series temporaires dans une longue durée ou pour un temps specifique.
+deux series peuvent d&rsquo;etre correlées mais pas cointegrées, vise versa.
 Pour approuver la cointegration nous allons determiner la p-value de chaque paire et ensuite effectuer un test stationnaire.</p>
 <h3 id="recherche-des-paires-cointegrees">Recherche des paires cointegrees</h3>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/4.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/4.png"/> 
 </figure>
 
 <h3 id="calcule-de-la-p-value-des-paires">Calcule de la P-value des Paires</h3>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/5.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/5.png"/> 
 </figure>
 
 <p>resultat:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/pvalue.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/pvalue.png"/> 
 </figure>
 </p>
-<p>Analysons également le résultat du test de cointégration. Nous pouvons voir dans ci-dessus qu&rsquo;il existe de nombreuses paires avec une pvalue inférieure à 0,05. Cela signifie que pour ces paires, nous pouvons rejeter l&rsquo;hypothèse nulle et qu&rsquo;elles peuvent être cointégrées</p>
+<p>Analysons également le résultat du test de cointégration. Nous pouvons voir ci-dessus qu&rsquo;il existe de nombreuses paires avec une pvalue inférieure à 0,05. Cela signifie que pour ces paires, nous pouvons rejeter l&rsquo;hypothèse nulle et qu&rsquo;elles peuvent être cointégrées</p>
 <h3 id="effectuer-un-test-stationnaire-pour-la-paire-sélectionnée">Effectuer un test stationnaire pour la paire sélectionnée</h3>
 <p>Maintenant, nous avons de nombreuses paires pour la stratégie où la pvalue est inférieure à 0,05. La sélection de la bonne paire est de la plus haute importance car la stratégie ne fonctionnera pas bien si les prix évoluent exactement ensemble. Ils doivent être divergents et mean-reverting pour que notre stratégie soit rentable.</p>
 <p>Allons-y avec la paire (&lsquo;CTXS&rsquo;, &lsquo;HPQ&rsquo;), CTXS: Citrix Systems, Inc et HPQ: HP Inc,et testons davantage la stationnarité de la propagation à l&rsquo;aide du <a href="https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test">test Augmented Dickey-Fuller</a>. Il est important que la propagation soit stationnaire. Une série chronologique est considérée comme stationnaire si des paramètres tels que la moyenne et la variance ne changent pas dans le temps. Nous allons d&rsquo;abord calculer <a href="https://www.investopedia.com/terms/h/hedgeratio.asp">le ratio de couverture(hedge ratio)</a> entre ces deux stockers en utilisant la régression <a href="https://en.wikipedia.org/wiki/Ordinary_least_squares">OLS(ordinary least square)</a>. Ensuite, en utilisant le ratio de couverture(hedge ratio), nous calculerons le spread(la difference de price entre 2 stock) et exécuterons le test Augmented Dickey-Fuller.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/6.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/6.png"/> 
 </figure>
 
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/7.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/7.png"/> 
 </figure>
 
 <h3 id="effections-notre-ols-regression">effections notre OLS regression</h3>
 <p>model=sm.OLS(train.asset1, train.asset2).fit()
 resultat
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/ols.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/ols.png"/> 
 </figure>
 </p>
 <p>print(&lsquo;Hedge Ratio = &lsquo;, model.params[0])
 Hedge Ratio =  4.497688958649726</p>
 <h3 id="calculate-la-dispersion">calculate la dispersion</h3>
 <p>spread = train.asset1 - model.params[0] * train.asset2</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/spread.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/spread.png"/> 
 </figure>
 
 <h3 id="augmented-dickey-fuller-test">Augmented Dickey-Fuller test</h3>
@@ -270,11 +286,11 @@ print(&lsquo;Critical Value = &lsquo;, adf[0])
 Critical Value =  -2.3204852154340516</p>
 <h3 id="valeurs-critiques">Valeurs Critiques</h3>
 <p>print(adf[4])
-{&lsquo;1%&rsquo;: -3.434617276362776, &lsquo;5%&rsquo;: -2.863424739608777, &lsquo;10%&rsquo;: -2.5677734071449034}</p>
+{&lsquo;1%': -3.434617276362776, &lsquo;5%': -2.863424739608777, &lsquo;10%': -2.5677734071449034}</p>
 <h3 id="interpretation-de-la-propagationspread">Interpretation de la propagation(spread)</h3>
 <p>Une valeur  R-square et une pvalue proche de zéro de la régression OLS suggèrent une très forte corrélation entre ces deux actions. La propagation(spread) semble stationnaire et la valeur Dickey-Fuller est de 0.005, ce qui est inférieur à la valeur au niveau de signification de 5 %. Par conséquent, nous sommes en mesure de rejeter l&rsquo;hypothèse nulle selon laquelle la propagation a une racine unitaire et pouvons conclure qu&rsquo;il s&rsquo;agit de stationnarité.</p>
 <h3 id="générer-des-signaux-de-trading-à-laide-du-z-score">Générer des signaux de trading à l&rsquo;aide du z-score</h3>
-<p>Nous avons utilisé l&rsquo;ensemble de données d&rsquo;entraînement(train set) jusqu&rsquo;à présent pour finaliser la paire d&rsquo;actions pour notre stratégie. À partir de maintenant, nous utiliserons l&rsquo;ensemble de données de test pour nous assurer que la génération de signaux de trading et le backtesting utilisent un ensemble de données d&rsquo;échantillon. Nous utiliserons le score z du rapport entre les deux cours boursiers pour générer des signaux de trading et définir les seuils supérieur et inférieur. Cela nous indiquera à quel point un prix est éloigné de la valeur moyenne de la population. S&rsquo;il est positif et que la valeur est supérieure aux seuils supérieurs, le cours de l&rsquo;action est supérieur à la valeur moyenne du cours. Par conséquent, son prix devrait baisser, nous voulons donc vendre cette action et acheter l&rsquo;autre.</p>
+<p>Nous avons utilisé l&rsquo;ensemble de données d&rsquo;entraînement(train set) jusqu'à présent pour finaliser la paire d&rsquo;actions pour notre stratégie. À partir de maintenant, nous utiliserons l&rsquo;ensemble de données de test pour nous assurer que la génération de signaux de trading et le backtesting utilisent un ensemble de données d'échantillon. Nous utiliserons le score z du rapport entre les deux cours boursiers pour générer des signaux de trading et définir les seuils supérieur et inférieur. Cela nous indiquera à quel point un prix est éloigné de la valeur moyenne de la population. S&rsquo;il est positif et que la valeur est supérieure aux seuils supérieurs, le cours de l&rsquo;action est supérieur à la valeur moyenne du cours. Par conséquent, son prix devrait baisser, nous voulons donc vendre cette action et acheter l&rsquo;autre.</p>
 <p>[voir code](code link:)</p>
 <h2 id="1-definir-la-fonction-_zscore_">1. Definir la fonction <em>zscore</em></h2>
 <p>def zscore(series):
@@ -297,7 +313,8 @@ return (series - series.mean()) / np.std(series)</p>
 <p>Prenez la différence de premier ordre de la colonne de signal pour obtenir la position du stock. Si c&rsquo;est +1 alors nous sommes en Achat, -1 alors vente et 0 si pas de position.</p>
 <p>Le deuxième signal sera juste à l&rsquo;opposé du premier, ce qui signifie que nous sommes Achat sur une action et simultanément courts sur l&rsquo;autre. De même, prenez la différence de premier ordre pour le deuxième signal et calculez la deuxième colonne de position.</p>
 <p>resultat:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/signal.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/signal.png"/> 
 </figure>
 </p>
 <h1 id="2--partie-ii-bactesting">2- PARTIE II: BACTESTING</h1>
@@ -316,7 +333,8 @@ return (series - series.mean()) / np.std(series)</p>
 [voir code](code link:)</li>
 </ul>
 <p>Voir la performance du portefeuil:
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/portl.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/portl.png"/> 
 </figure>
 </p>
 <ul>
@@ -327,7 +345,8 @@ return (series - series.mean()) / np.std(series)</p>
 <li>Les investisseurs peuvent comparer le CAGR de deux alternatives pour évaluer la performance d&rsquo;une action par rapport à d&rsquo;autres actions d&rsquo;un groupe de pairs ou d&rsquo;un indice de marché</li>
 </ul>
 <p>ou,</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/gar.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/gar.png"/> 
 </figure>
 
 <p>avec:
@@ -336,7 +355,8 @@ m = 1/n</p>
 <p>VF = Valuer Finale</p>
 <p>VI = Valeur iniatl</p>
 <p><a href="https://www.investopedia.com">investopedia</a>, l&rsquo;une de mes meilleurs plateforme pour apprendre le monde de la finance. Tres recommander.</p>
-<figure><img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/8.png"/>
+<figure>
+    <img src="https://antonio2505.github.io/antoine_kassi/images/pairs_trading/8.png"/> 
 </figure>
 
 <p>le <code>CAGR</code> de la stratégie est de <code>12,206%</code> ce qui semble prometteur, mais il y a beaucoup de choses à considérer avant de tirer un quelconque conclusion:</p>
@@ -344,7 +364,7 @@ m = 1/n</p>
 <p>Il y a toujours une limite à l&rsquo;utilisation de données historiques pour prévoir l&rsquo;avenir. La bonne performance de la strategies avec les donnee historiques ne provent pas que notre stategies aura une belle performance dans le future.</p>
 <p>Nous n&rsquo;avons pas pris en compte les coûts liés aux transactions, aux dérapages du marché etc. Normalement, une stratégie neutre au marché(market-neutral) se traduit par un nombre élevé de transactions impliquant plus de coûts liés aux transactions.
 La stratégie ne function ne pas correctement dans un marché illiquide.</p>
-<p>Cette strategies peut etre utilisée en combinaison d&rsquo;une autre strategie pour reduire ou limiter les risks, par example les options<a href="https://www.investopedia.com/terms/v/verticalspread.asp">(vertical spread)</a>, aussi les peut etre ulitiser un systeme de trading automatisé.</p>
+<p>Cette strategies peut etre utilisée en combinaison d&rsquo;une autre strategie pour reduire ou limiter les risks, par example les options<a href="https://www.investopedia.com/terms/v/verticalspread.asp">(vertical spread)</a>, aussi peut etre ulitisé un systeme de trading automatisé.</p>
 <p><a href="https://github.com/antonio2505/Pairs-Trading/blob/main/Pairs_Trading.ipynb">Lien vers le référentiel GitHub</a></p>
 <ul class="pa0">
   

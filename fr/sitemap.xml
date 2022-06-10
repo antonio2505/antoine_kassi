@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://antonio2505.github.io/antoine_kassi/</loc>
     <lastmod>2022-05-25T10:58:08-04:00</lastmod>
@@ -16,12 +17,16 @@
                 hreflang="fr"
                 href="https://antonio2505.github.io/antoine_kassi/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/post/projet-5/</loc>
     <lastmod>2022-05-25T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/tags/scene/</loc>
     <lastmod>2022-05-25T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -36,7 +41,9 @@
                 hreflang="fr"
                 href="https://antonio2505.github.io/antoine_kassi/tags/scene/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/tags/</loc>
     <lastmod>2022-05-25T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -51,27 +58,37 @@
                 hreflang="fr"
                 href="https://antonio2505.github.io/antoine_kassi/tags/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/post/projet-4/</loc>
     <lastmod>2022-04-29T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/post/projet-3/</loc>
     <lastmod>2022-04-24T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/post/projet-2/</loc>
     <lastmod>2022-04-10T11:00:59-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/post/projet-1/</loc>
     <lastmod>2022-03-29T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/post/</loc>
     <lastmod>2022-03-02T12:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -86,11 +103,15 @@
                 hreflang="fr"
                 href="https://antonio2505.github.io/antoine_kassi/post/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/aboutfr/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -104,7 +125,9 @@
                 hreflang="fr"
                 href="https://antonio2505.github.io/antoine_kassi/categories/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://antonio2505.github.io/antoine_kassi/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -119,4 +142,5 @@
                 href="https://antonio2505.github.io/antoine_kassi/contact/"
                 />
   </url>
+  
 </urlset>
